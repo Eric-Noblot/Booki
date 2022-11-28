@@ -1,0 +1,794 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+ 
+:root{
+    --bg_color: #FFFFFF;
+    --box_color: #D9D9D9;
+    --booki_blue: #0065FC;
+    --hover_blue: #DEEBFF;
+    --booki_radius : 20px;  
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+    max-width: 1440px;
+    height: 1vh;
+    background-color: var(--bg_color);
+    margin: 30px;  /*c'est mieux MARGIN ou PADDING ?*/
+    font-family: 'Raleway', sans-serif; 
+
+}
+
+body a{ 
+    text-decoration: none;
+    color: black;
+}
+
+body h1, h2{ 
+    font-size: 22px;
+}
+body h3{ 
+    font-size: 17px;
+}
+body p{
+    font-size: 16px;
+}
+
+            /*      HEADER
+                                */
+
+#booki_Cont{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.booki_text{
+    display: flex;
+    margin-left: auto;
+    list-style-type: none;
+}
+
+#i_booki{
+    position: absolute;
+    top: 52px;
+    left: 65px;
+}
+
+#booki_Cont a{
+    margin-left: 50px;
+}
+ 
+#booki_Cont a:hover{
+    border-top: 2px solid var(--booki_blue);
+    padding-top: 40px;  /*Comment faire ? */
+}
+
+ /*____________FORM______________*/ 
+
+#search_box{
+    display: flex;
+    height: 60px;
+    margin: 40px 0px 48px 0px;
+}
+
+.cursor_box{
+    min-width: 60px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--box_color);
+    border-radius: 15px 0px 0px 15px;
+}
+
+.cursor{
+    font-size: 1.5em;
+}
+
+#search_input{
+    height: 100%;
+    width: 250px;
+    border: none;
+    border: 1px solid var(--box_color);
+    border-right: none;
+    border-left: none;
+    font-size: 18px;
+    padding-left: 15px;
+}
+
+#search_button{
+    min-width: 155px;
+    background-color: var(--booki_blue);
+    border-radius: 0px 15px 15px 0px;
+    color: var(--bg_color);
+    font-size: 1.1em;
+    font-weight: bold;
+    height: 100%;
+}
+
+#loupe{
+    color: var(--bg_color);
+    font-size: 1.3em;
+    display: none;
+}
+
+
+
+  /*_________NAV__________*/
+
+#filtre_box{
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+}
+
+#icon_info{
+    background-color: var(--booki_blue);
+    color: var(--bg_color);
+    border-color: grey;
+    font-size: 1.3em;
+    margin-right: 15px;
+}
+
+#nav{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#nav_box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+}
+
+    
+.button_nav{
+    display: flex;
+    align-items: center;
+    height: 55px;
+    padding: 0 15px;
+    border-radius: 25px;
+    background-color: var(--bg_color);
+    border: 2px solid var(--box_color);
+    margin-left: 2px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.button_nav:hover{
+    background-color: var(--hover_blue);
+    cursor: pointer;
+}
+
+.icon_button{
+    color: var(--booki_blue);
+    font-size: 1.4em;
+    margin-right: 20px;
+}
+
+ 
+            /*      SECTION
+                                */
+ 
+
+#section_Cont{
+
+    display: flex;
+    flex-direction: column;
+}
+
+.heber_popCont{
+    display: flex;
+    justify-content: space-between;
+}
+
+  /*_________HÉBERGEMENT__________*/
+
+
+#heber_Cont{
+    background-color:var(--box_color);
+    border-radius: var(--booki_radius);
+    height: 100%;
+    display: flex;
+    /*width: 950px;*/
+    width: 67%;
+    flex-direction: column;
+    margin-right: 7px;
+    justify-content: center;
+    padding-bottom: 20px;    
+    
+}
+ 
+#heber_Cont h2{
+    margin-left: 30px;  
+    padding-top: 22px;
+    margin-bottom: 16px;
+}
+
+#afficher{
+    font-weight: bold;
+    margin-left: 40px;
+
+}
+
+.heber_total_box{
+ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+ 
+.heber_box{
+    display: block;
+    background-color: var(--bg_color);
+    width: 255px;
+    height: 240px;
+    border-radius:  var(--booki_radius);
+    margin: 25px 2px;
+    line-height: 15px;
+}
+ 
+.heber_photo{
+    height: 120px;
+    width: 100%;
+    border-radius:  var(--booki_radius)  var(--booki_radius) 0px 0px;
+    padding: 7px;
+}
+
+.heber_photo:hover{
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.heber_text{
+    margin-left: 15px;
+}
+
+.heber_text p{
+    font-size: 14px;
+}
+    
+.blue_star{
+    color:var(--booki_blue);
+    font-size: 0.9em;
+}
+
+.grey_star{
+    color:var(--box_color);
+    font-size: 0.9em;
+}
+
+  /*_________POPULARITÉ__________*/
+ 
+#pop_Cont{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width: 30%;
+    min-width: 375px;
+    height: 733px;
+    background-color: var(--box_color);
+    border-radius: var(--booki_radius);
+    background-color: var(--box_color);
+}
+ 
+.pop_logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 25px;
+    margin-bottom: -13px;
+    width: 100%;
+}
+
+
+#pop_box_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 430px;
+}
+ 
+.pop_box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--bg_color);
+    width: 350px;
+    height: 170px;
+    border-radius: var(--booki_radius);
+    margin: 0px 5px;
+}
+
+.pop_text{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 190px;
+    padding: 15px 0px;
+}
+
+.pop_text h3{
+    margin:0;
+}
+
+.stars{
+    margin-top: auto;
+}
+
+.photo_pop{
+    height: 170px;
+    width: 150px;
+    border-radius: var(--booki_radius) 0px 0px var(--booki_radius);
+    padding: 7px;
+    margin-right: 10px;
+    margin-top: 2px;
+}
+
+.photo_pop:hover{
+    padding: 0;
+    height: 170px;
+    margin-right: 15px;
+    margin-top: 4px;
+}
+
+.pop_text p{
+    font-size: 14px;
+}
+
+ /*_________ACTIVITÉS__________*/
+
+ #acti_Cont{
+
+    display: flex;
+    flex-direction: column;
+    margin : 30px 0px 50px 0px;
+}
+
+ #acti_Cont h2{
+    margin-bottom: 30px;
+}
+
+.acti_box{
+    display: flex;
+    justify-content: space-between; 
+
+}
+
+.acti_photo{
+    display: flex;
+    flex-direction: column;
+    height: 88%;
+    width: 100%;
+    border-radius:  var(--booki_radius)  var(--booki_radius) 0px 0px;
+}
+
+.acti_text{
+    border-radius:  var(--booki_radius);
+    box-shadow: 5px 5px 15px grey;
+    margin:0px 5px;
+    height: 500px;
+    width: 310px;
+}
+
+.acti_text:hover{
+    box-shadow: 5px 5px 15px black;
+}
+
+.acti_text h3{
+    margin-left: 20px;
+}
+
+ /*__________FOOTER___________*/
+
+#footer_Cont{
+    background-color: var(--box_color);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+    margin-bottom: 30px;
+}
+
+#footer_Cont td, #footer_Cont th{
+    padding: 15px 160px 15px 80px;
+    text-align: start;
+}
+
+ /*_________MEDIA QUERIES___________*/
+
+
+@media screen and (max-width: 1252px){          /*LES HÉBERGEMENTS PASSENT DE 3 à 2 PAR LIGNE */
+    
+
+    #nav_box{
+        width: 80%;
+    }
+
+    #pop_Cont{
+        height: 1022px;
+        min-width: 395px;
+
+    }
+
+    #pop_box_container{ 
+        height: 71%;
+        width: 430px;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #footer_Cont td, #footer_Cont th{
+        padding: 15px 90px 15px 70px;
+    }
+
+    .acti_text{
+        height: 400px;
+        width: 250px;
+        margin:0px 5px;
+    }
+    
+    .acti_photo{
+
+        height: 81%;
+        width: 100%;
+        border-radius:  var(--booki_radius)  var(--booki_radius) 0px 0px;
+    }
+
+}
+
+ /*-------*/
+
+/*@media screen and (max-width: 1020px){*/          /* MODE TABLETTE */
+    @media screen and (max-width: 998px){          /* MODE TABLETTE */
+
+    .stars {
+        font-size: 0.9em;
+    }
+    #nav_box{
+        width: 100%;
+    }
+
+    #heber_Cont{
+        margin-right: 0px;
+        width: 100%;        
+    }
+
+    .heber_popCont{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+    }  
+
+    #pop_Cont{
+        height: 100%;
+        min-width: 100%;
+        margin-top: 60px;
+    }
+
+
+    #pop_box_container{ 
+        
+        width: 100%;    
+        height: 200px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        border-radius: var(--booki_radius);
+    }  
+    
+    .pop_logo{
+
+        flex-direction: row;
+        justify-content: space-between; 
+        margin: 25px 0px;
+        width: 94%;
+    }
+
+    .pop_box{
+
+        width: 30%;
+        height: 150px;
+
+    }
+
+    .photo_pop{
+        height: 150px;
+        width: 105px;
+        border-radius: var(--booki_radius) 0px 0px var(--booki_radius);
+        padding: 7px;
+        margin-right: 5px;
+    }
+
+    .photo_pop:hover{
+        padding: 0;
+        height: 150px;
+        margin-right: 10px;
+        margin-top: 4px;
+    }
+
+    .pop_text h3{
+        font-size: 14px;
+    }
+
+    .pop_text p{
+        font-size: 13px;
+    }
+
+    .acti_text{
+        height: 300px;
+        margin:0px 5px;
+        width: 200px;
+    }
+    
+    .acti_photo{
+        height: 79%;
+        width: 100%;
+        border-radius:  var(--booki_radius)  var(--booki_radius) 0px 0px;
+    }
+
+    .acti_text h3{
+    font-size: 16px;
+    margin-left: 15px;
+    } 
+
+    #footer_Cont td, #footer_Cont th{
+        padding: 15px 0px 15px 80px;
+    }
+}
+
+@media screen and (max-width: 790px){       
+
+    .stars {
+        font-size: 0.8em;
+    }
+
+    
+
+        
+
+}
+ /*-------*/                /* MODE MOBILE */
+
+    @media screen and (max-width: 760px){
+   /* @media screen and (max-width: 768px){*/
+
+
+    #booki_Cont{
+        flex-direction: column;
+        height: 100px;  
+        margin-bottom: 80px;
+    }
+
+    .booki_text{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 3px solid var(--box_color);
+    }
+
+    #booki_Cont a{
+        margin: 0px;
+    }
+
+    #booki_Cont a:hover{
+        border-top :none;
+        border-bottom: 3px solid var(--booki_blue);
+        padding-bottom: 36px;  /*Comment faire ? */
+    }
+    
+    #search_input{  
+        width: 300px;
+    }
+
+    #search_box{
+        justify-content: center;
+        margin: 45px 0px 25px 0px;
+    }
+
+    #search_button{
+        min-width: 70px;
+    }
+    
+    #rechercher{
+        display: none;
+    }
+
+    #loupe{
+        display: inline; /* que dois je mettre pour le faire réapparatitre?*/
+    }
+    
+    #nav{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        height: 200px;
+    }
+
+    #nav_box{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-left: 0px;
+        height: 100%;
+    }
+
+    .button_nav{
+        height: 60px;
+        width: 250px;
+        margin: 15px 0px;
+    }
+
+    #filtre_box{
+        margin: 70px 0px 45px 0px;
+    }
+
+    .heber_popCont{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 40px;
+        height: 100%;
+        margin-top: -70px;
+    }
+
+    #heber_Cont{
+        border-radius: 0px;
+        background-color: var(--bg_color);
+        margin-top: -30px;
+    }
+
+    .heber_total_box{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heber_box{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--bg_color);
+        width: 85%;
+        height: 240px;
+        line-height: 15px;
+        box-shadow: 4px 4px 15px black;
+        
+    }
+     
+    .heber_photo{
+        height: 145px;
+       
+    }
+    .heber_text p{
+        font-size: 16px;
+    }
+    .heber_text h3{
+        font-size: 18px;
+        margin-top: 2px;
+    }
+
+    #pop_Cont{
+        border-radius: 0px;
+    }
+
+    #pop_box_container{
+
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 620px;
+        gap: 30px;
+    }
+     
+    .pop_box{
+
+        width: 85%;
+        height: 170px;
+        border-radius: var(--booki_radius);
+        margin: 0px 5px;
+    }
+
+    .pop_logo{
+        flex-direction: row;
+        justify-content: space-between; 
+        margin: 25px 0px;
+        width: 85%;
+    }
+
+    .pop_text{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 190px;
+        padding: 15px 0px;
+    }
+
+    .stars{
+        margin-top: auto;
+        font-size: 1.1em;
+    }
+    
+    .photo_pop{
+        height: 170px;
+        width: 190px;
+        border-radius: var(--booki_radius) 0px 0px var(--booki_radius);
+        padding: 7px;
+        margin-right: 10px;
+        margin-top: 2px;
+    }
+    
+    .photo_pop:hover{
+        padding: 0;
+        height: 170px;
+        margin-right: 15px;
+        margin-top: 4px;
+    }
+    
+    
+    .pop_text h3{
+        font-size: 18px;
+    }
+    .pop_text p{
+        font-size: 16px;
+    }
+    #footer_Cont td, #footer_Cont th{
+        padding: 15px 0px 15px 35px;
+    }
+}
+
+
+ /*-------*/                /* MINIMUM */
+
+
+@media screen and (max-width: 600px){       
+
+    body{
+        background-color: orange;
+    }
+
+    .pop_text h3{
+        font-size: 16px;
+    }
+    .pop_text p{
+        font-size: 14px;
+    }
+
+    .stars{
+        margin-top: auto;
+        font-size: 1em;
+    }
+
+}
+
+
+/* 
+
+- quoi mettre dans le body pour le standardiser?
+- lier les icons et la box pour cliquer direct
+- rajouter des effets pour agrandir les images
+- comment agrandir la barre en haut dans :hover?
+- Comment gérer les ancres pour un défilé progressif?
+- est ce qu'on peut utiliser "table" (ou une autre variable systeme) pour creer une div ou vaut mieux creer une div?
+ 
+ 
+Dans le guide des etapes clés il est indiqué
+ qu'il faut intégrer les images dans le HTML et non le CSS.
+  Pour eviter que les images soient étirées ou couper,
+  j'ai utilisé une width 100% puis la fonction object-fix.
+ 
+  align-content:
+  align-itself
+ 
