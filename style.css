@@ -6,6 +6,7 @@
     --booki_blue: #0065FC;
     --hover_blue: #DEEBFF;
     --booki_radius : 20px;  
+    --shadow_hover : 5px 5px 30px rgb(140, 138, 138);
 }
 
 *{
@@ -18,7 +19,6 @@ body{
     background-color: var(--bg_color);
     margin: 30px;  /*c'est mieux MARGIN ou PADDING ?*/
     font-family: 'Raleway', sans-serif; 
-
 }
 
 body a{ 
@@ -178,7 +178,6 @@ body p{
  
 
 #section_Cont{
-
     display: flex;
     flex-direction: column;
 }
@@ -202,7 +201,6 @@ body p{
     margin-right: 7px;
     justify-content: center;
     padding-bottom: 20px;    
-    
 }
  
 #heber_Cont h2{
@@ -214,11 +212,9 @@ body p{
 #afficher{
     font-weight: bold;
     margin-left: 40px;
-
 }
 
 .heber_total_box{
- 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -233,6 +229,10 @@ body p{
     border-radius:  var(--booki_radius);
     margin: 25px 2px;
     line-height: 15px;
+}
+
+.heber_box:hover, .pop_box:hover, .acti_text:hover{
+        box-shadow: var(--shadow_hover)
 }
  
 .heber_photo{
@@ -349,9 +349,7 @@ body p{
  /*_________ACTIVITÉS__________*/
 
  #acti_Cont{
-
-    display: flex;
-    flex-direction: column;
+    display: block;
     margin : 30px 0px 50px 0px;
 }
 
@@ -381,17 +379,13 @@ body p{
     width: 310px;
 }
 
-.acti_text:hover{
-    box-shadow: 5px 5px 15px black;
-}
-
 .acti_text h3{
     margin-left: 20px;
 }
 
  /*__________FOOTER___________*/
 
-#footer_Cont{
+#table_box{
     background-color: var(--box_color);
     height: 100%;
     display: flex;
@@ -400,7 +394,7 @@ body p{
     margin-bottom: 30px;
 }
 
-#footer_Cont td, #footer_Cont th{
+#table_box td, #table_box th{
     padding: 15px 160px 15px 80px;
     text-align: start;
 }
@@ -418,7 +412,6 @@ body p{
     #pop_Cont{
         height: 1022px;
         min-width: 395px;
-
     }
 
     #pop_box_container{ 
@@ -428,7 +421,7 @@ body p{
         align-items: center;
     }
 
-    #footer_Cont td, #footer_Cont th{
+    #table_box td, #table_box th{
         padding: 15px 90px 15px 70px;
     }
 
@@ -439,7 +432,6 @@ body p{
     }
     
     .acti_photo{
-
         height: 81%;
         width: 100%;
         border-radius:  var(--booki_radius)  var(--booki_radius) 0px 0px;
@@ -449,7 +441,6 @@ body p{
 
  /*-------*/
 
-/*@media screen and (max-width: 1020px){*/          /* MODE TABLETTE */
     @media screen and (max-width: 998px){          /* MODE TABLETTE */
 
     .stars {
@@ -479,7 +470,6 @@ body p{
 
 
     #pop_box_container{ 
-        
         width: 100%;    
         height: 200px;
         flex-direction: row;
@@ -489,7 +479,6 @@ body p{
     }  
     
     .pop_logo{
-
         flex-direction: row;
         justify-content: space-between; 
         margin: 25px 0px;
@@ -497,10 +486,8 @@ body p{
     }
 
     .pop_box{
-
         width: 30%;
         height: 150px;
-
     }
 
     .photo_pop{
@@ -543,7 +530,7 @@ body p{
     margin-left: 15px;
     } 
 
-    #footer_Cont td, #footer_Cont th{
+    #table_box td, #table_box th{
         padding: 15px 0px 15px 80px;
     }
 }
@@ -553,10 +540,6 @@ body p{
     .stars {
         font-size: 0.8em;
     }
-
-    
-
-        
 
 }
  /*-------*/                /* MODE MOBILE */
@@ -576,7 +559,7 @@ body p{
         justify-content: space-evenly;
         width: 100%;
         margin-top: 20px;
-        padding-bottom: 20px;
+        padding-bottom: 36px;
         border-bottom: 3px solid var(--box_color);
     }
 
@@ -664,8 +647,7 @@ body p{
         width: 85%;
         height: 240px;
         line-height: 15px;
-        box-shadow: 4px 4px 15px black;
-        
+        box-shadow: 4px 4px 10px var(--box_color);
     }
      
     .heber_photo{
@@ -685,7 +667,6 @@ body p{
     }
 
     #pop_box_container{
-
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
@@ -694,7 +675,6 @@ body p{
     }
      
     .pop_box{
-
         width: 85%;
         height: 170px;
         border-radius: var(--booki_radius);
@@ -736,15 +716,37 @@ body p{
         margin-right: 15px;
         margin-top: 4px;
     }
-    
-    
+
     .pop_text h3{
         font-size: 18px;
     }
     .pop_text p{
         font-size: 16px;
     }
-    #footer_Cont td, #footer_Cont th{
+
+    .acti_box{
+        flex-direction: column; 
+        gap: 50px;  
+        align-items: center;
+    
+    }
+    
+    .acti_photo{
+        height: 75%;
+    }
+    
+    .acti_text{
+
+        margin:0px 0px;
+        width: 85%;
+        height: 240px;
+    }
+    .acti_text h3{
+        font-size: 1.1em;
+        margin-left: 25px;
+    }
+
+    #table_box td, #table_box th{
         padding: 15px 0px 15px 35px;
     }
 }
@@ -753,11 +755,19 @@ body p{
  /*-------*/                /* MINIMUM */
 
 
-@media screen and (max-width: 600px){       
+@media screen and (max-width: 585px){     /*réajustement des boutons filtre
+                                             taille polices dans POP
+                                             taille des étoiles dans POP*/
 
-    body{
-        background-color: orange;
-    }
+
+.button_nav{
+
+    width: 220px;
+    padding: 0px 0px 0px 10px;
+    margin-left: 0px;
+    font-weight: bold;
+    font-size: 14px;
+}
 
     .pop_text h3{
         font-size: 16px;
@@ -773,6 +783,44 @@ body p{
 
 }
 
+
+@media screen and (max-width: 518px){      /*réajustement des boutons filtre
+                                            + barre de recherche (FORM)
+                                            + photos pop*/
+
+    .button_nav{
+        width: 200px;
+    }
+
+    .icon_nav{
+        margin-right: 15px;
+    }
+
+    .photo_pop{
+        width: 160px;
+    }
+
+}
+
+@media screen and (max-width: 480px){   /*réajustement des boutons filtre
+                                         + barre de recherche (FORM)
+                                         + photos pop*/
+
+
+    .button_nav{
+
+        width: 180px;
+        font-size: 13px;
+    }
+
+    #search_input{  
+        width: 250px;
+    }
+
+    .photo_pop{
+        width: 150px;
+    }
+}
 
 /* 
 
