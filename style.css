@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
  
 :root{
-    --bg_color: #FFFFFF;
-    --box_color: #D9D9D9;
-    --booki_blue: #0065FC;
-    --hover_blue: #DEEBFF;
-    --booki_radius : 20px;  
-    --shadow_hover : 5px 5px 30px rgb(140, 138, 138);
+    --bg_color: #FFFFFF;  /* couleur de fond */
+    --box_color: #D9D9D9;  /* couleur de fond des boîtes */
+    --booki_blue: #0065FC;  /* bleu principal */
+    --hover_blue: #DEEBFF;  /* bleu HOVER */
+    --booki_radius : 20px;    /* Angle des boîtes */
+    --shadow_hover : 5px 5px 30px rgb(140, 138, 138);  /* Ombre des boîtes */
 }
 
 *{
@@ -20,12 +20,13 @@ body{
     margin: 30px;  /*c'est mieux MARGIN ou PADDING ?*/
     font-family: 'Raleway', sans-serif; 
 }
-
 body a{ 
     text-decoration: none;
     color: black;
 }
-
+body li{
+    list-style-type: none;
+}
 body h1, h2{ 
     font-size: 22px;
 }
@@ -50,7 +51,6 @@ body p{
 .booki_text{
     display: flex;
     margin-left: auto;
-    list-style-type: none;
 }
 
 #i_booki{
