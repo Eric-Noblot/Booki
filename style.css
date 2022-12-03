@@ -6,7 +6,7 @@
     --booki_blue: #0065FC;  /* bleu principal */
     --hover_blue: #DEEBFF;  /* bleu HOVER */
     --booki_radius : 20px;    /* Angle des boîtes */
-    --shadow_hover : 5px 5px 30px rgb(140, 138, 138);  /* Ombre des boîtes */
+    --shadow_hover : 5px 5px 30px rgb(88, 83, 83);  /* Ombre des boîtes */
 }
 
 *{
@@ -34,22 +34,42 @@ body h3{
     font-size: 17px;
 }
 body p{
-    font-size: 16px;
+    font-size: 15px;
 }
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.blue_star{
+    color:var(--booki_blue);
+    font-size: 0.9em;
+}
+
+.grey_star{
+    color:var(--box_color);
+    font-size: 0.9em;
+}
+
 
             /*      HEADER
                                 */
 
 #booki_Cont{
-    display: flex;
     align-items: center;
     height: 50px;
     width: 100%;
     margin-bottom: 50px;
 }
 
-.booki_text{
-    display: flex;
+#booki_box{
     margin-left: auto;
 }
 
@@ -70,17 +90,14 @@ body p{
 
  /*____________FORM______________*/ 
 
-#search_box{
-    display: flex;
+#search_Cont{
     height: 60px;
     margin: 40px 0px 48px 0px;
 }
 
-.cursor_box{
+#cursor_box{
     min-width: 60px;
     height: 100%;
-    display: flex;
-    align-items: center;
     justify-content: center;
     background-color: var(--box_color);
     border-radius: 15px 0px 0px 15px;
@@ -118,15 +135,7 @@ body p{
 }
 
 
-
   /*_________NAV__________*/
-
-#filtre_box{
-    margin: 40px 0px;
-    display: flex;
-    align-items: center;
-    
-}
 
 #icon_info{
     color: var(--booki_blue);
@@ -138,23 +147,20 @@ body p{
  
 }
 
-#nav{
-    display: flex;
+#nav_Cont{
     align-items: center;
-    flex-direction: row;
 }
 
 #nav_box{
-    display: flex;
     justify-content: space-around;
-    align-items: center;
     width: 70%;
 }
 
+#filtre_box{
+    margin: 40px 0px;
+}
     
 .button_nav{
-    display: flex;
-    align-items: center;
     height: 55px;
     padding: 0 15px;
     border-radius: 25px;
@@ -178,15 +184,9 @@ body p{
  
             /*      SECTION
                                 */
- 
 
-#section_Cont{
-    display: flex;
-    flex-direction: column;
-}
 
-.heber_popCont{
-    display: flex;
+.heber-pop{
     justify-content: space-between;
 }
 
@@ -194,13 +194,11 @@ body p{
 
 
 #heber_Cont{
+    flex-direction: column;
     background-color:var(--box_color);
     border-radius: var(--booki_radius);
     height: 100%;
-    display: flex;
-    /*width: 950px;*/
     width: 67%;
-    flex-direction: column;
     margin-right: 7px;
     justify-content: center;
     padding-bottom: 20px;    
@@ -218,7 +216,6 @@ body p{
 }
 
 .heber_total_box{
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -257,35 +254,22 @@ body p{
 .heber_text p{
     font-size: 14px;
 }
-    
-.blue_star{
-    color:var(--booki_blue);
-    font-size: 0.9em;
-}
 
-.grey_star{
-    color:var(--box_color);
-    font-size: 0.9em;
-}
 
   /*_________POPULARITÉ__________*/
  
 #pop_Cont{
-    display: flex;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     width: 30%;
     min-width: 375px;
     height: 733px;
     background-color: var(--box_color);
     border-radius: var(--booki_radius);
-    background-color: var(--box_color);
 }
- 
+
 .pop_logo{
-    display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-around;
     margin-top: 25px;
     margin-bottom: -13px;
@@ -294,18 +278,14 @@ body p{
 
 
 #pop_box_container{
-    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
     height: 100%;
     width: 430px;
 }
  
 .pop_box{
-    display: flex;
     flex-direction: row;
-    align-items: center;
     background-color: var(--bg_color);
     width: 350px;
     height: 170px;
@@ -314,8 +294,8 @@ body p{
 }
 
 .pop_text{
-    display: flex;
     flex-direction: column;
+    align-items: flex-start;
     height: 100%;
     width: 190px;
     padding: 15px 0px;
@@ -338,6 +318,7 @@ body p{
     margin-top: 2px;
 }
 
+
 .photo_pop:hover{
     padding: 0;
     height: 170px;
@@ -351,8 +332,8 @@ body p{
 
  /*_________ACTIVITÉS__________*/
 
- #acti_Cont{
-    display: block;
+ #acti_Cont{    
+    flex-direction: column;
     margin : 30px 0px 50px 0px;
 }
 
@@ -361,9 +342,7 @@ body p{
 }
 
 .acti_box{
-    display: flex;
     justify-content: space-between; 
-
 }
 
 .acti_photo{
@@ -388,16 +367,15 @@ body p{
 
  /*__________FOOTER___________*/
 
-#table_box{
+#table_Cont{
     background-color: var(--box_color);
     height: 100%;
-    display: flex;
     align-items: center;
     padding: 20px 0px;
     margin-bottom: 30px;
 }
 
-#table_box td, #table_box th{
+#table_Cont td, #table_Cont th{
     padding: 15px 160px 15px 80px;
     text-align: start;
 }
@@ -422,10 +400,9 @@ body p{
         height: 71%;
         width: 430px;
         justify-content: space-around;
-        align-items: center;
     }
 
-    #table_box td, #table_box th{
+    #table_Cont td, #table_Cont th{
         padding: 15px 90px 15px 70px;
     }
 
@@ -459,8 +436,7 @@ body p{
         width: 100%;        
     }
 
-    .heber_popCont{
-        display: flex;
+    .heber-pop{
         justify-content: space-between;
         flex-direction: column;
         width: 100%;
@@ -534,20 +510,21 @@ body p{
     margin-left: 15px;
     } 
 
-    #table_box td, #table_box th{
+    #table_Cont td, #table_Cont th{
         padding: 15px 0px 15px 80px;
     }
 
 
 }
 
-@media screen and (max-width: 790px){       
+@media screen and (max-width: 790px){       /* rétrecissement des étoiles dans Popularité */
 
     .stars {
         font-size: 0.8em;
     }
 
 }
+
  /*-------*/                /* MODE MOBILE */
 
     @media screen and (max-width: 760px){
@@ -560,8 +537,7 @@ body p{
         margin-bottom: 80px;
     }
 
-    .booki_text{
-        display: flex;
+    #booki_box{
         justify-content: space-evenly;
         width: 100%;
         margin-top: 20px;
@@ -583,7 +559,7 @@ body p{
         width: 300px;
     }
 
-    #search_box{
+    #search_Cont{
         justify-content: center;
         margin: 45px 0px 25px 0px;
     }
@@ -592,7 +568,7 @@ body p{
         min-width: 70px;
     }
     
-    #rechercher{
+    #bouton_rechercher{
         display: none;
     }
 
@@ -600,8 +576,7 @@ body p{
         display: inline; /* que dois je mettre pour le faire réapparatitre?*/
     }
     
-    #nav{
-        display: flex;
+    #nav_Cont{
         flex-direction: column;
         align-items: flex-start;
         margin-bottom: 10px;
@@ -609,7 +584,6 @@ body p{
     }
 
     #nav_box{
-        display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         margin-left: 0px;
@@ -626,8 +600,7 @@ body p{
         margin: 70px 0px 45px 0px;
     }
 
-    .heber_popCont{
-        display: flex;
+    .heber-pop{
         flex-direction: column-reverse;
         gap: 40px;
         height: 100%;
@@ -652,7 +625,6 @@ body p{
         background-color: var(--bg_color);
         width: 85%;
         height: 240px;
-        line-height: 15px;
         box-shadow: 4px 4px 10px var(--box_color);
     }
      
@@ -695,7 +667,6 @@ body p{
     }
 
     .pop_text{
-        display: flex;
         flex-direction: column;
         height: 100%;
         width: 190px;
@@ -734,11 +705,11 @@ body p{
         flex-direction: column; 
         gap: 50px;  
         align-items: center;
-    
+        object-fit:contain;
     }
     
     .acti_photo{
-        height: 75%;
+        object-fit:cover;
     }
     
     .acti_text{
@@ -752,7 +723,7 @@ body p{
         margin-left: 25px;
     }
 
-    #table_box tr{
+    #table_Cont tr{
         display: flex;
         flex-direction: column;
         margin-left: 60px;
@@ -760,11 +731,11 @@ body p{
         margin-top: 10px;
     }
 
-    #table_box td{
+    #table_Cont td{
         padding: 8px 0px;
     }
 
-    #table_box th{
+    #table_Cont th{
         padding: 15px 0px;
     }
 }
@@ -779,7 +750,6 @@ body p{
 
 
 .button_nav{
-
     width: 220px;
     padding: 0px 0px 0px 10px;
     margin-left: 0px;
