@@ -211,7 +211,6 @@ body p{
 }
 
 #afficher{
-    font-weight: bold;
     margin-left: 40px;
 }
 
@@ -236,10 +235,12 @@ body p{
 }
  
 .heber_photo{
-    height: 120px;
+    height: 125px;
     width: 100%;
     border-radius:  var(--booki_radius)  var(--booki_radius) 0px 0px;
     padding: 7px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .heber_photo:hover{
@@ -272,7 +273,7 @@ body p{
     flex-direction: row;
     justify-content: space-around;
     margin-top: 25px;
-    margin-bottom: -13px;
+    margin-bottom: -18px;
     width: 100%;
 }
 
@@ -291,6 +292,7 @@ body p{
     height: 170px;
     border-radius: var(--booki_radius);
     margin: 0px 5px;
+    
 }
 
 .pop_text{
@@ -316,12 +318,13 @@ body p{
     padding: 7px;
     margin-right: 10px;
     margin-top: 2px;
+    object-fit: cover;
+    object-position: center;
 }
 
 
 .photo_pop:hover{
     padding: 0;
-    height: 170px;
     margin-right: 15px;
     margin-top: 4px;
 }
@@ -351,6 +354,8 @@ body p{
     height: 88%;
     width: 100%;
     border-radius:  var(--booki_radius)  var(--booki_radius) 0px 0px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .acti_text{
@@ -367,17 +372,29 @@ body p{
 
  /*__________FOOTER___________*/
 
-#table_Cont{
+footer{
     background-color: var(--box_color);
-    height: 100%;
-    align-items: center;
-    padding: 20px 0px;
-    margin-bottom: 30px;
+    width: 100%;
+    height: 225px;
+    margin: 30px 0px;
 }
 
-#table_Cont td, #table_Cont th{
-    padding: 15px 160px 15px 80px;
-    text-align: start;
+#foot_Cont{
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-gap: 18%;
+    margin-left: 65px;
+    margin-right: 15px;
+}
+
+.foot_box{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 25px;
+}
+
+.foot_box p{
+    margin: 10px 0px;
 }
 
 
@@ -392,7 +409,7 @@ body p{
     }
 
     #pop_Cont{
-        height: 1022px;
+        height: 1025px;
         min-width: 395px;
     }
 
@@ -400,10 +417,6 @@ body p{
         height: 71%;
         width: 430px;
         justify-content: space-around;
-    }
-
-    #table_Cont td, #table_Cont th{
-        padding: 15px 90px 15px 70px;
     }
 
     .acti_text{
@@ -427,7 +440,7 @@ body p{
     .stars {
         font-size: 0.9em;
     }
-    #nav_box{
+    #nav_box{   
         width: 100%;
     }
 
@@ -472,7 +485,7 @@ body p{
 
     .photo_pop{
         height: 150px;
-        width: 105px;
+        width: 110px;
         border-radius: var(--booki_radius) 0px 0px var(--booki_radius);
         padding: 7px;
         margin-right: 5px;
@@ -510,25 +523,27 @@ body p{
     margin-left: 15px;
     } 
 
-    #table_Cont td, #table_Cont th{
-        padding: 15px 0px 15px 80px;
+    #foot_Cont{
+        margin-left: 45px;
     }
-
 
 }
 
-@media screen and (max-width: 790px){       /* rétrecissement des étoiles dans Popularité */
+@media screen and (max-width: 798px){       /* rétrécissement étoiles et H3 dans Popularité */
 
     .stars {
         font-size: 0.8em;
     }
 
+    .pop_text h3{
+        font-size: 13px;
+    }
 }
 
  /*-------*/                /* MODE MOBILE */
 
-    @media screen and (max-width: 760px){
-   /* @media screen and (max-width: 768px){*/
+    /*@media screen and (max-width: 760px){*/
+    @media screen and (max-width: 768px){
 
 
     #booki_Cont{
@@ -549,7 +564,7 @@ body p{
         margin: 0px;
     }
 
-    #booki_Cont a:hover{
+    #booki_Cont:hover{
         border-top :none;
         border-bottom: 3px solid var(--booki_blue);
         padding-bottom: 36px;  /*Comment faire ? */
@@ -723,20 +738,26 @@ body p{
         margin-left: 25px;
     }
 
-    #table_Cont tr{
-        display: flex;
+    footer{
+        height: 495px;
+    }
+    
+    #foot_Cont{
         flex-direction: column;
-        margin-left: 60px;
-        margin-bottom: 20px;
-        margin-top: 10px;
+        margin-left: 45 px;
     }
 
-    #table_Cont td{
-        padding: 8px 0px;
+    .foot_box{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 25px;
     }
-
-    #table_Cont th{
-        padding: 15px 0px;
+    
+    .foot_box h3{
+        margin: 15px 0px;
+    }
+    .foot_box p{
+        margin: 8px 0px;
     }
 }
 
@@ -748,7 +769,7 @@ body p{
                                              taille polices dans POP
                                              taille des étoiles dans POP*/
 
-
+    
 .button_nav{
     width: 220px;
     padding: 0px 0px 0px 10px;
@@ -773,7 +794,6 @@ body p{
 
 
 @media screen and (max-width: 518px){      /*réajustement des boutons filtre
-                                            + barre de recherche (FORM)
                                             + photos pop*/
 
     .button_nav{
@@ -791,7 +811,6 @@ body p{
 }
 
 @media screen and (max-width: 480px){   /*réajustement des boutons filtre
-                                         + barre de recherche (FORM)
                                          + photos pop*/
 
 
@@ -812,20 +831,6 @@ body p{
 }
 
 /* 
-
-- quoi mettre dans le body pour le standardiser?
-- lier les icons et la box pour cliquer direct
-- rajouter des effets pour agrandir les images
-- comment agrandir la barre en haut dans :hover?
+- régler le hover de Booki
+- Chaque carte doit être cliquable
 - Comment gérer les ancres pour un défilé progressif?
-- est ce qu'on peut utiliser "table" (ou une autre variable systeme) pour creer une div ou vaut mieux creer une div?
- 
- 
-Dans le guide des etapes clés il est indiqué
- qu'il faut intégrer les images dans le HTML et non le CSS.
-  Pour eviter que les images soient étirées ou couper,
-  j'ai utilisé une width 100% puis la fonction object-fix.
- 
-  align-content:
-  align-itself
- 
