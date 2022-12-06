@@ -9,10 +9,14 @@
     --shadow_hover : 5px 5px 30px rgb(88, 83, 83);  /* Ombre des boîtes */
 }
 
-*{
-  box-sizing: border-box;
-}
 
+            /*      COMMUN
+                                */
+
+*{
+     box-sizing: border-box;
+}
+                          
 body{
     max-width: 1440px;
     height: 1vh;
@@ -31,7 +35,7 @@ body h1, h2{
     font-size: 22px;
 }
 body h3{ 
-    font-size: 17px;
+    font-size: 16px;
 }
 body p{
     font-size: 15px;
@@ -48,6 +52,10 @@ body p{
     align-items: center;
 }
 
+.photo{
+    object-fit: cover;
+    object-position: center;
+}
 .blue_star{
     color:var(--booki_blue);
     font-size: 0.9em;
@@ -58,6 +66,9 @@ body p{
     font-size: 0.9em;
 }
 
+.heber_box:hover, .pop_box:hover, .acti_box:hover{
+    box-shadow: var(--shadow_hover)
+}
 
             /*      HEADER
                                 */
@@ -79,13 +90,13 @@ body p{
     left: 43px;
 }
 
-#booki_Cont a{
+#booki_Cont li{
     margin-left: 50px;
 }
  
 #booki_Cont a:hover{
     border-top: 2px solid var(--booki_blue);
-    padding-top: 44px;  /*Comment faire ? */
+    padding-top: 44px;
 }
 
  /*____________FORM______________*/ 
@@ -162,7 +173,7 @@ body p{
     
 .button_nav{
     height: 55px;
-    padding: 0 15px;
+    padding: 0 20px;
     border-radius: 25px;
     background-color: var(--bg_color);
     border: 2px solid var(--box_color);
@@ -186,7 +197,7 @@ body p{
                                 */
 
 
-.heber-pop{
+#section1_Cont{
     justify-content: space-between;
 }
 
@@ -204,14 +215,14 @@ body p{
     padding-bottom: 20px;    
 }
  
-#heber_Cont h2{
-    margin-left: 30px;  
-    padding-top: 22px;
-    margin-bottom: 16px;
+#heber_Cont > h2 {
+    margin-left: 40px;  
+    padding-top: 24px;
+    margin-bottom: 14px;
 }
 
-#afficher{
-    margin-left: 40px;
+#heber_Cont > h3{
+    margin-left: 40px;  
 }
 
 .heber_total_box{
@@ -230,17 +241,11 @@ body p{
     line-height: 15px;
 }
 
-.heber_box:hover, .pop_box:hover, .acti_text:hover{
-        box-shadow: var(--shadow_hover)
-}
- 
 .heber_photo{
     height: 125px;
     width: 100%;
     border-radius:  var(--booki_radius)  var(--booki_radius) 0px 0px;
     padding: 7px;
-    object-fit: cover;
-    object-position: center;
 }
 
 .heber_photo:hover{
@@ -255,7 +260,6 @@ body p{
 .heber_text p{
     font-size: 14px;
 }
-
 
   /*_________POPULARITÉ__________*/
  
@@ -277,7 +281,6 @@ body p{
     width: 100%;
 }
 
-
 #pop_box_container{
     flex-direction: column;
     justify-content: space-evenly;
@@ -288,8 +291,8 @@ body p{
 .pop_box{
     flex-direction: row;
     background-color: var(--bg_color);
-    width: 350px;
     height: 170px;
+    width: 350px;
     border-radius: var(--booki_radius);
     margin: 0px 5px;
     
@@ -298,9 +301,10 @@ body p{
 .pop_text{
     flex-direction: column;
     align-items: flex-start;
-    height: 100%;
+    height: 170px;
     width: 190px;
     padding: 15px 0px;
+    background-color: red;
 }
 
 .pop_text h3{
@@ -318,8 +322,6 @@ body p{
     padding: 7px;
     margin-right: 10px;
     margin-top: 2px;
-    object-fit: cover;
-    object-position: center;
 }
 
 
@@ -335,40 +337,42 @@ body p{
 
  /*_________ACTIVITÉS__________*/
 
- #acti_Cont{    
+ #section2_Cont{    
     flex-direction: column;
     margin : 30px 0px 50px 0px;
+    row-gap: 25px;
 }
 
- #acti_Cont h2{
-    margin-bottom: 30px;
+#acti_Cont{
+    justify-content: space-between; 
 }
 
 .acti_box{
-    justify-content: space-between; 
+    border-radius:  var(--booki_radius);
+    box-shadow: 5px 5px 15px grey;
+    margin:0px 5px;
+    height: 500px;
+    width: 22%;
+}
+
+.acti_text{
+    height: 100%;
+    width: 100%;
+}
+.acti_text h3{
+    margin-left: 20px;
+    margin-right: 2px;
 }
 
 .acti_photo{
     display: flex;
     flex-direction: column;
-    height: 88%;
+    height: 87%;
     width: 100%;
     border-radius:  var(--booki_radius)  var(--booki_radius) 0px 0px;
-    object-fit: cover;
-    object-position: center;
 }
 
-.acti_text{
-    border-radius:  var(--booki_radius);
-    box-shadow: 5px 5px 15px grey;
-    margin:0px 5px;
-    height: 500px;
-    width: 310px;
-}
 
-.acti_text h3{
-    margin-left: 20px;
-}
 
  /*__________FOOTER___________*/
 
@@ -392,7 +396,9 @@ footer{
     align-items: flex-start;
     margin-top: 25px;
 }
-
+.foot_box h3{
+    margin: 14px 0px;
+}
 .foot_box p{
     margin: 10px 0px;
 }
@@ -419,16 +425,13 @@ footer{
         justify-content: space-around;
     }
 
-    .acti_text{
+    .acti_box{
         height: 400px;
-        width: 250px;
-        margin:0px 5px;
+        width: 22%;
     }
     
     .acti_photo{
-        height: 81%;
-        width: 100%;
-        border-radius:  var(--booki_radius)  var(--booki_radius) 0px 0px;
+        height: 84%;
     }
 
 }
@@ -449,18 +452,17 @@ footer{
         width: 100%;        
     }
 
-    .heber-pop{
+    #section1_Cont{
         justify-content: space-between;
         flex-direction: column;
         width: 100%;
-    }  
+    }
 
     #pop_Cont{
         height: 100%;
         min-width: 100%;
         margin-top: 60px;
     }
-
 
     #pop_box_container{ 
         width: 100%;    
@@ -506,22 +508,20 @@ footer{
         font-size: 13px;
     }
 
-    .acti_text{
+    .acti_box{
         height: 300px;
-        margin:0px 5px;
-        width: 200px;
     }
     
+    .acti_text h3{
+        font-size: 16px;
+        margin-left: 15px;
+    } 
+
     .acti_photo{
-        height: 79%;
+        height: 80%;
         width: 100%;
         border-radius:  var(--booki_radius)  var(--booki_radius) 0px 0px;
     }
-
-    .acti_text h3{
-    font-size: 16px;
-    margin-left: 15px;
-    } 
 
     #foot_Cont{
         margin-left: 45px;
@@ -553,23 +553,27 @@ footer{
     }
 
     #booki_box{
-        justify-content: space-evenly;
         width: 100%;
         margin-top: 20px;
-        padding-bottom: 36px;
+        padding: 0;
+    }
+
+    #booki_Cont li{
+        width: 50%;
+        text-align: center;
+        padding-bottom: 36px;   
         border-bottom: 3px solid var(--box_color);
+        margin-left: 0px;
+    }
+    #booki_Cont li:hover{
+        border-color: var(--booki_blue);
     }
 
-    #booki_Cont a{
-        margin: 0px;
-    }
-
-    #booki_Cont:hover{
+    #booki_Cont a:hover{
+        padding-top: 0px;
         border-top :none;
-        border-bottom: 3px solid var(--booki_blue);
-        padding-bottom: 36px;  /*Comment faire ? */
     }
-    
+
     #search_input{  
         width: 300px;
     }
@@ -615,7 +619,7 @@ footer{
         margin: 70px 0px 45px 0px;
     }
 
-    .heber-pop{
+    #section1_Cont{
         flex-direction: column-reverse;
         gap: 40px;
         height: 100%;
@@ -641,6 +645,12 @@ footer{
         width: 85%;
         height: 240px;
         box-shadow: 4px 4px 10px var(--box_color);
+    }
+
+    .heber_box a{
+        margin: 0;
+        padding: 0;
+        width: 100%;
     }
      
     .heber_photo{
@@ -716,28 +726,26 @@ footer{
         font-size: 16px;
     }
 
-    .acti_box{
+    #section2_Cont h2{
+        margin-left: 15px;
+    }
+
+    #acti_Cont{
         flex-direction: column; 
         gap: 50px;  
         align-items: center;
-        object-fit:contain;
     }
-    
+
+    .acti_box{
+        width: 85%; 
+        height: 235px;
+    }
+
     .acti_photo{
-        object-fit:cover;
+        height: 78%;
+        width: 100%;
+        border-radius:  var(--booki_radius)  var(--booki_radius) 0px 0px;
     }
-    
-    .acti_text{
-
-        margin:0px 0px;
-        width: 85%;
-        height: 240px;
-    }
-    .acti_text h3{
-        font-size: 1.1em;
-        margin-left: 25px;
-    }
-
     footer{
         height: 495px;
     }
@@ -752,7 +760,6 @@ footer{
         align-items: flex-start;
         margin-top: 25px;
     }
-    
     .foot_box h3{
         margin: 15px 0px;
     }
@@ -768,15 +775,13 @@ footer{
 @media screen and (max-width: 585px){     /*réajustement des boutons filtre
                                              taille polices dans POP
                                              taille des étoiles dans POP*/
-
-    
-.button_nav{
-    width: 220px;
-    padding: 0px 0px 0px 10px;
-    margin-left: 0px;
-    font-weight: bold;
-    font-size: 14px;
-}
+    .button_nav{
+        width: 220px;
+        padding: 0px 0px 0px 10px;
+        margin-left: 0px;
+        font-weight: bold;
+        font-size: 14px;
+    }
 
     .pop_text h3{
         font-size: 16px;
@@ -812,7 +817,6 @@ footer{
 
 @media screen and (max-width: 480px){   /*réajustement des boutons filtre
                                          + photos pop*/
-
 
     .button_nav{
 
