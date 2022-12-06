@@ -14,12 +14,12 @@
                                 */
 
 *{
-     box-sizing: border-box;
+     box-sizing: border-box;    
 }
                           
 body{
     max-width: 1440px;
-    height: 1vh;
+    height: 100%;
     background-color: var(--bg_color);
     margin: 30px;  /*c'est mieux MARGIN ou PADDING ?*/
     font-family: 'Raleway', sans-serif; 
@@ -56,11 +56,11 @@ body p{
     object-fit: cover;
     object-position: center;
 }
+
 .blue_star{
     color:var(--booki_blue);
     font-size: 0.9em;
 }
-
 .grey_star{
     color:var(--box_color);
     font-size: 0.9em;
@@ -263,7 +263,7 @@ body p{
 
   /*_________POPULARITÉ__________*/
  
-#pop_Cont{
+#aside_Cont{
     flex-direction: column;
     align-items: center;
     width: 30%;
@@ -274,14 +274,13 @@ body p{
 }
 
 .pop_logo{
-    flex-direction: row;
     justify-content: space-around;
     margin-top: 25px;
     margin-bottom: -18px;
     width: 100%;
 }
 
-#pop_box_container{
+#pop_Cont{
     flex-direction: column;
     justify-content: space-evenly;
     height: 100%;
@@ -289,32 +288,17 @@ body p{
 }
  
 .pop_box{
-    flex-direction: row;
     background-color: var(--bg_color);
     height: 170px;
     width: 350px;
     border-radius: var(--booki_radius);
     margin: 0px 5px;
-    
 }
-
-.pop_text{
-    flex-direction: column;
-    align-items: flex-start;
-    height: 170px;
-    width: 190px;
-    padding: 15px 0px;
-    background-color: red;
+.pop_box a{
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
 }
-
-.pop_text h3{
-    margin:0;
-}
-
-.stars{
-    margin-top: auto;
-}
-
 .photo_pop{
     height: 170px;
     width: 150px;
@@ -323,16 +307,28 @@ body p{
     margin-right: 10px;
     margin-top: 2px;
 }
-
-
 .photo_pop:hover{
     padding: 0;
     margin-right: 15px;
     margin-top: 4px;
 }
 
+.pop_text{
+    flex-direction: column;
+    align-items: flex-start;
+    height: 170px;
+    width: 190px;
+    padding: 15px 0px;
+}
+.pop_text h3{
+    margin:0;
+}
 .pop_text p{
     font-size: 14px;
+}
+
+.pop_star{
+    margin-top: auto;
 }
 
  /*_________ACTIVITÉS__________*/
@@ -414,12 +410,12 @@ footer{
         width: 80%;
     }
 
-    #pop_Cont{
+    #aside_Cont{
         height: 1025px;
         min-width: 395px;
     }
 
-    #pop_box_container{ 
+    #pop_Cont{ 
         height: 71%;
         width: 430px;
         justify-content: space-around;
@@ -440,7 +436,7 @@ footer{
 
     @media screen and (max-width: 998px){          /* MODE TABLETTE */
 
-    .stars {
+    .pop_star {
         font-size: 0.9em;
     }
     #nav_box{   
@@ -458,13 +454,13 @@ footer{
         width: 100%;
     }
 
-    #pop_Cont{
+    #aside_Cont{
         height: 100%;
         min-width: 100%;
         margin-top: 60px;
     }
 
-    #pop_box_container{ 
+    #pop_Cont{ 
         width: 100%;    
         height: 200px;
         flex-direction: row;
@@ -531,7 +527,7 @@ footer{
 
 @media screen and (max-width: 798px){       /* rétrécissement étoiles et H3 dans Popularité */
 
-    .stars {
+    .pop_star {
         font-size: 0.8em;
     }
 
@@ -665,11 +661,11 @@ footer{
         margin-top: 2px;
     }
 
-    #pop_Cont{
+    #aside_Cont{
         border-radius: 0px;
     }
 
-    #pop_box_container{
+    #pop_Cont{
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
@@ -698,7 +694,7 @@ footer{
         padding: 15px 0px;
     }
 
-    .stars{
+    .pop_star{
         margin-top: auto;
         font-size: 1.1em;
     }
@@ -790,7 +786,7 @@ footer{
         font-size: 14px;
     }
 
-    .stars{
+    .pop_star{
         margin-top: auto;
         font-size: 1em;
     }
@@ -835,6 +831,5 @@ footer{
 }
 
 /* 
-- régler le hover de Booki
-- Chaque carte doit être cliquable
+
 - Comment gérer les ancres pour un défilé progressif?
