@@ -95,8 +95,8 @@ body p{
 }
  
 #booki_Cont a:hover{
-    border-top: 2px solid var(--booki_blue);
-    padding-top: 44px;
+    border-top: 3px solid var(--booki_blue);
+    padding-top: 43px;
 }
 
  /*____________FORM______________*/ 
@@ -218,7 +218,7 @@ body p{
 #heber_Cont > h2 {
     margin-left: 40px;  
     padding-top: 24px;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 }
 
 #heber_Cont > h3{
@@ -299,7 +299,7 @@ body p{
     padding: 0;
     word-wrap: break-word;
 }
-.photo_pop{
+.pop_photo{
     height: 170px;
     width: 150px;
     border-radius: var(--booki_radius) 0px 0px var(--booki_radius);
@@ -307,7 +307,7 @@ body p{
     margin-right: 10px;
     margin-top: 2px;
 }
-.photo_pop:hover{
+.pop_photo:hover{
     padding: 0;
     margin-right: 15px;
     margin-top: 4px;
@@ -468,7 +468,7 @@ footer{
         align-items: flex-start;
         border-radius: var(--booki_radius);
     }  
-    
+
     .pop_logo{
         flex-direction: row;
         justify-content: space-between; 
@@ -481,7 +481,7 @@ footer{
         height: 150px;
     }
 
-    .photo_pop{
+    .pop_photo{
         height: 150px;
         width: 110px;
         border-radius: var(--booki_radius) 0px 0px var(--booki_radius);
@@ -489,7 +489,10 @@ footer{
         margin-right: 5px;
     }
 
-    .photo_pop:hover{
+    .pop_text{
+        padding: 20px 2px;
+    }
+    .pop_photo:hover{
         padding: 0;
         height: 150px;
         margin-right: 10px;
@@ -642,12 +645,6 @@ footer{
         height: 240px;
         box-shadow: 4px 4px 10px var(--box_color);
     }
-
-    .heber_box a{
-        margin: 0;
-        padding: 0;
-        width: 100%;
-    }
      
     .heber_photo{
         height: 145px;
@@ -699,7 +696,7 @@ footer{
         font-size: 1.1em;
     }
     
-    .photo_pop{
+    .pop_photo{
         height: 170px;
         width: 190px;
         border-radius: var(--booki_radius) 0px 0px var(--booki_radius);
@@ -708,7 +705,7 @@ footer{
         margin-top: 2px;
     }
     
-    .photo_pop:hover{
+    .pop_photo:hover{
         padding: 0;
         height: 170px;
         margin-right: 15px;
@@ -805,7 +802,7 @@ footer{
         margin-right: 15px;
     }
 
-    .photo_pop{
+    .pop_photo{
         width: 160px;
     }
 
@@ -824,7 +821,7 @@ footer{
         width: 250px;
     }
 
-    .photo_pop{
+    .pop_photo{
         width:150px;             
     }
     
