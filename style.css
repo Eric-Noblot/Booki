@@ -761,7 +761,7 @@ footer{
 
     #foot_Cont{
         flex-direction: column;
-        margin-left: 45 px;
+        margin-left: 45px;
     }
 
     .foot_box{
@@ -870,7 +870,7 @@ width:150px;
 }
 
 @media screen and (max-width: 405px){   /*réajustement des boutons filtre
-    + photos pop*/
+                                        + photos pop*/
 
 .button_filtre{
 
@@ -892,10 +892,12 @@ width:130px;
 
 }
 
-@media screen and (max-width: 360px){   /*réajustement des boutons filtre*/
+@media screen and (max-width: 360px){   /*TAILLE MINIMUM */
 
+#filtre_box{
+    justify-content: center;
+}
 .button_filtre{
-    margin: center;
     width: 250px;
     font-size: 14px;
     }
