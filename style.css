@@ -15,13 +15,15 @@
 
 *{
      box-sizing: border-box;    
+     
 }
                           
 body{
     max-width: 1440px;
     height: 100%;
+    margin: 0;
+    padding: 30px;
     background-color: var(--bg_color);
-    margin: 30px;  /*c'est mieux MARGIN ou PADDING ?*/
     font-family: 'Raleway', sans-serif; 
 }
 body a{ 
@@ -80,7 +82,7 @@ body p{
     margin-bottom: 50px;
 }
 
-#booki_box{
+nav{
     margin-left: auto;
 }
 
@@ -96,11 +98,13 @@ body p{
  
 #booki_Cont a:hover{
     border-top: 3px solid var(--booki_blue);
-    padding-top: 43px;
+    padding-top: 44px;
 }
+
 
  /*____________FORM______________*/ 
 
+ 
 #search_Cont{
     height: 60px;
     margin: 40px 0px 48px 0px;
@@ -137,6 +141,7 @@ body p{
     font-size: 1.1em;
     font-weight: bold;
     height: 100%;
+    border: none;
 }
 
 #loupe{
@@ -146,7 +151,8 @@ body p{
 }
 
 
-  /*_________NAV__________*/
+  /*_________FITLRES__________*/
+
 
 #icon_info{
     color: var(--booki_blue);
@@ -155,23 +161,22 @@ body p{
     margin-right: 15px;
     border-radius: 50%;
     font-size: 0.9em;
- 
 }
 
-#nav_Cont{
+#filtre_Cont{
     align-items: center;
 }
 
-#nav_box{
+#filtre_box{
     justify-content: space-around;
     width: 70%;
 }
 
-#filtre_box{
-    margin: 40px 0px;
+#info_box{
+    margin: 30px 0px 20px 0px;
 }
     
-.button_nav{
+.button_filtre{
     height: 55px;
     padding: 0 20px;
     border-radius: 25px;
@@ -181,7 +186,7 @@ body p{
     font-weight: bold;
     font-size: 16px;
 }
-.button_nav:hover{
+.button_filtre:hover{
     background-color: var(--hover_blue);
     cursor: pointer;
 }
@@ -191,6 +196,7 @@ body p{
     font-size: 1.4em;
     margin-right: 20px;
 }
+
 
  
             /*      SECTION
@@ -217,8 +223,8 @@ body p{
  
 #heber_Cont > h2 {
     margin-left: 40px;  
-    padding-top: 24px;
-    margin-bottom: 12px;
+    padding-top: 22px;
+    margin-bottom: 15px;
 }
 
 #heber_Cont > h3{
@@ -242,7 +248,7 @@ body p{
 }
 
 .heber_photo{
-    height: 125px;
+    height: 52%;
     width: 100%;
     border-radius:  var(--booki_radius)  var(--booki_radius) 0px 0px;
     padding: 7px;
@@ -280,6 +286,11 @@ body p{
     width: 100%;
 }
 
+.pop_button{
+    color: var(--booki_blue);
+    font-size: 1.4em;
+}
+
 #pop_Cont{
     flex-direction: column;
     justify-content: space-evenly;
@@ -294,11 +305,11 @@ body p{
     border-radius: var(--booki_radius);
     margin: 0px 5px;
 }
-.pop_box a{
+/*.pop_box a{
     margin: 0;
     padding: 0;
     word-wrap: break-word;
-}
+}*/
 .pop_photo{
     height: 170px;
     width: 150px;
@@ -375,8 +386,8 @@ body p{
 footer{
     background-color: var(--box_color);
     width: 100%;
-    height: 225px;
-    margin: 30px 0px;
+    padding-bottom: 30px;
+    margin: 10px 0px;
 }
 
 #foot_Cont{
@@ -406,13 +417,17 @@ footer{
 @media screen and (max-width: 1252px){          /*LES HÉBERGEMENTS PASSENT DE 3 à 2 PAR LIGNE */
     
 
-    #nav_box{
+    #filtre_box{
         width: 80%;
     }
 
     #aside_Cont{
-        height: 1025px;
+        height: 1022px;
         min-width: 395px;
+    }
+
+    .heber_box{
+        width: 45%;
     }
 
     #pop_Cont{ 
@@ -420,7 +435,9 @@ footer{
         width: 430px;
         justify-content: space-around;
     }
-
+    .pop_logo{
+        margin-bottom: -17px;
+    }
     .acti_box{
         height: 400px;
         width: 22%;
@@ -434,18 +451,22 @@ footer{
 
  /*-------*/
 
-    @media screen and (max-width: 998px){          /* MODE TABLETTE */
+    @media screen and (max-width: 992px){          /* MODE TABLETTE */
 
     .pop_star {
         font-size: 0.9em;
     }
-    #nav_box{   
+    #filtre_box{   
         width: 100%;
     }
 
     #heber_Cont{
         margin-right: 0px;
         width: 100%;        
+    }
+
+    .heber_box{
+        width: 29%;
     }
 
     #section1_Cont{
@@ -490,7 +511,7 @@ footer{
     }
 
     .pop_text{
-        padding: 20px 2px;
+        padding: 20px 4px;
     }
     .pop_photo:hover{
         padding: 0;
@@ -528,7 +549,7 @@ footer{
 
 }
 
-@media screen and (max-width: 798px){       /* rétrécissement étoiles et H3 dans Popularité */
+@media screen and (max-width: 805px){       /* rétrécissement étoiles et H3 dans Popularité */
 
     .pop_star {
         font-size: 0.8em;
@@ -541,7 +562,7 @@ footer{
 
  /*-------*/                /* MODE MOBILE */
 
-    /*@media screen and (max-width: 760px){*/
+
     @media screen and (max-width: 768px){
 
 
@@ -551,18 +572,21 @@ footer{
         margin-bottom: 80px;
     }
 
-    #booki_box{
+    nav{
         width: 100%;
         margin-top: 20px;
-        padding: 0;
     }
+
+    nav ul{
+        padding: 0;
+        }
 
     #booki_Cont li{
         width: 50%;
         text-align: center;
         padding-bottom: 36px;   
         border-bottom: 3px solid var(--box_color);
-        margin-left: 0px;
+        margin: 0px;
     }
     #booki_Cont li:hover{
         border-color: var(--booki_blue);
@@ -591,31 +615,29 @@ footer{
     }
 
     #loupe{
-        display: inline; /* que dois je mettre pour le faire réapparatitre?*/
+        display: inline; 
     }
     
-    #nav_Cont{
+    #filtre_Cont{
         flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 10px;
-        height: 200px;
+        align-items: flex-start;    
     }
 
-    #nav_box{
-        justify-content: space-between;
+    #filtre_box{
+        justify-content: space-around;
         flex-wrap: wrap;
         margin-left: 0px;
         height: 100%;
     }
 
-    .button_nav{
+    .button_filtre{
         height: 60px;
         width: 250px;
         margin: 15px 0px;
     }
 
-    #filtre_box{
-        margin: 70px 0px 45px 0px;
+    #info_box{
+        margin: 20px 0px 40px 0px;
     }
 
     #section1_Cont{
@@ -739,10 +761,7 @@ footer{
         width: 100%;
         border-radius:  var(--booki_radius)  var(--booki_radius) 0px 0px;
     }
-    footer{
-        height: 495px;
-    }
-    
+
     #foot_Cont{
         flex-direction: column;
         margin-left: 45 px;
@@ -765,15 +784,19 @@ footer{
  /*-------*/                /* MINIMUM */
 
 
-@media screen and (max-width: 585px){     /*réajustement des boutons filtre
+@media screen and (max-width: 592px){     /*réajustement des boutons filtre
                                              taille polices dans POP
                                              taille des étoiles dans POP*/
-    .button_nav{
+    .button_filtre{
         width: 220px;
-        padding: 0px 0px 0px 10px;
+        padding: 0px 0px 0px 15px;
         margin-left: 0px;
         font-weight: bold;
         font-size: 14px;
+    }
+
+    #filtre_box{
+        justify-content: space-between;
     }
 
     .pop_text h3{
@@ -791,14 +814,14 @@ footer{
 }
 
 
-@media screen and (max-width: 518px){      /*réajustement des boutons filtre
+@media screen and (max-width: 532px){      /*réajustement des boutons filtre
                                             + photos pop*/
 
-    .button_nav{
+    .button_filtre{
         width: 200px;
     }
 
-    .icon_nav{
+    .icon_filtre{
         margin-right: 15px;
     }
 
@@ -808,10 +831,10 @@ footer{
 
 }
 
-@media screen and (max-width: 480px){   /*réajustement des boutons filtre
+@media screen and (max-width: 495px){   /*réajustement des boutons filtre
                                          + photos pop*/
 
-    .button_nav{
+    .button_filtre{
 
         width: 180px;
         font-size: 13px;
@@ -827,6 +850,90 @@ footer{
     
 }
 
-/* 
+@media screen and (max-width: 440px){   /*réajustement des boutons filtre
+    + photos pop*/
 
-- Comment gérer les ancres pour un défilé progressif?
+.button_filtre{
+
+width: 165px;
+}
+
+#search_input{  
+width: 200px;
+}
+
+.pop_text{
+    padding-right: 4px;
+}
+
+.pop_photo{
+width:150px;             
+}
+
+}
+
+@media screen and (max-width: 405px){   /*réajustement des boutons filtre
+    + photos pop*/
+
+.button_filtre{
+
+width: 140px;
+}
+
+#search_input{  
+width: 170px;
+}
+
+.pop_photo{
+width:130px;             
+}
+
+.pop_star{
+    margin-top: auto;
+    font-size: 0.8em;
+}
+
+}
+
+@media screen and (max-width: 360px){   /*réajustement des boutons filtre*/
+
+.button_filtre{
+    margin: center;
+    width: 250px;
+    font-size: 14px;
+    }
+
+.heber_text p{
+    font-size: 15px;
+}
+.heber_text h3{
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+.heber_star{
+    font-size: 0.9em;
+}
+
+.pop_photo{
+    width:120px;             
+    }
+.pop_text{
+    padding-right: 4px;
+}
+.pop_text h3{
+    font-size: 14px;
+}
+.pop_text p{
+    font-size: 12px;
+}
+.pop_star{
+    margin-top: auto;
+    font-size: 0.8em;
+}
+
+.acti_text h3{
+    font-size: 15px;
+    margin-left: 15px;
+} 
+}

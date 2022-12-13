@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/5119865bde.js" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booki</title>
 </head>
 
@@ -12,15 +14,18 @@
 
     <header>
         <div id="booki_Cont" class="container">
-            <p>
+            <div>
                 <img src="images/icons/i_booki.png" alt="i_booki" id="i_booki">
                 <img src="images/icons/Booki.png" alt="logo_booki">
-            </p>
-            <ul id="booki_box" class="box">
-                <li><a href="#ancre_heber">Hébergements</a></li>
-                <li><a href="#ancre_acti">Activités</a></li>
-            </ul>
+            </div>
+            <nav>
+                <ul id="booki_box" class="box">
+                    <li><a href="#ancre_heber">Hébergements</a></li>
+                    <li><a href="#ancre_acti">Activités</a></li>
+                </ul>
+            </nav>
         </div>
+        
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <p>En plein centre-ville ou en pleine nature</p>
         <div id="search_Cont" class="container">
@@ -34,25 +39,25 @@
                     id="loupe"></i></button>
         </div>
 
-        <nav id="nav_Cont" class ="container">
+        <div id="filtre_Cont" class ="container">
             <h3>Filtres</h3>
-            <div id="nav_box" class="box">
-                <a href="#"><div class="button_nav box">
-                 <i class="fa-solid fa-money-bill-wave icon_button icon_nav"></i>Économique</div>
+            <div id="filtre_box" class="box">
+                <a href="#"><div class="button_filtre box">
+                 <i class="fa-solid fa-money-bill-wave icon_button icon_filtre"></i>Économique</div>
                 </a>
-                <a href="#"><div class="button_nav box">
-                 <i class="fa-solid fa-person icon_button icon_nav"></i>Familial</div>
+                <a href="#"><div class="button_filtre box">
+                 <i class="fa-solid fa-person icon_button icon_filtre"></i>Familial</div>
                 </a>
-                <a href="#"><div class="button_nav box">
-                 <i class="fa-solid fa-heart icon_button icon_nav"></i>Romantique</div>
+                <a href="#"><div class="button_filtre box">
+                 <i class="fa-solid fa-heart icon_button icon_filtre"></i>Romantique</div>
                 </a>
-                <a href="#"><div class="button_nav box">
-                 <i class="fa-solid fa-dog icon_button icon_nav"></i>Animaux autorisés</div>
+                <a href="#"><div class="button_filtre box">
+                 <i class="fa-solid fa-dog icon_button icon_filtre"></i>Animaux autorisés</div>
                 </a>
             </div>
-        </nav>
+        </div>
 
-        <div id="filtre_box" class="box">
+        <div id="info_box" class="box">
             <i class="fa-solid fa-info" id="icon_info"></i>
             <p>Plus de 500 logements sont disponibles dans cette ville</p>
         </div>
@@ -70,7 +75,7 @@
                             <div class="heber_text">
                                 <h3>Auberge La Canebière</h3>
                                 <p>Nuit à partir de 25<strong>€</strong></p>
-                                <div>
+                                <div class="heber_star">
                                     <i class="fa-solid fa-star blue_star"></i>
                                     <i class="fa-solid fa-star blue_star"></i>
                                     <i class="fa-solid fa-star blue_star"></i>
@@ -87,7 +92,7 @@
                             <div class="heber_text">
                                 <h3>Hôtel du port</h3>
                                 <p>Nuit à partir de 52<strong>€</strong></p>
-                                <div>
+                                <div class="heber_star">
                                     <i class="fa-solid fa-star blue_star"></i>
                                     <i class="fa-solid fa-star blue_star"></i>
                                     <i class="fa-solid fa-star blue_star"></i>
@@ -104,7 +109,7 @@
                             <div class="heber_text">
                                 <h3>Hôtel Les mouettes</h3>
                                 <p>Nuit à partir de 76<strong>€</strong></p>
-                                <div>
+                                <div class="heber_star">
                                     <i class="fa-solid fa-star blue_star"></i>
                                     <i class="fa-solid fa-star blue_star"></i>
                                     <i class="fa-solid fa-star blue_star"></i>
@@ -127,7 +132,7 @@
                                     <i class="fa-solid fa-star blue_star"></i>
                                     <i class="fa-solid fa-star blue_star"></i>
                                     <i class="fa-solid fa-star grey_star"></i>
-                                </div>
+                                </div class="heber_star">
                             </div>
                         </a>
                     </div>
@@ -144,7 +149,7 @@
                                     <i class="fa-solid fa-star blue_star"></i>
                                     <i class="fa-solid fa-star blue_star"></i>
                                     <i class="fa-solid fa-star grey_star"></i>
-                                </div>
+                                </div class="heber_star">
                             </div>
                         </a>
                     </div>
@@ -161,7 +166,7 @@
                                     <i class="fa-solid fa-star blue_star"></i>
                                     <i class="fa-solid fa-star blue_star"></i>
                                     <i class="fa-solid fa-star grey_star"></i>
-                                </div>
+                                </div class="heber_star">
                             </div>
                         </a>
                     </div>
@@ -172,7 +177,7 @@
             <aside id="aside_Cont" class="container">
                 <div class="pop_logo box">
                     <h2>Les plus populaires</h2>
-                    <i class="fa-solid fa-chart-line icon_button"></i>
+                    <i class="fa-solid fa-chart-line pop_button"></i>
                 </div>
                 <div id="pop_Cont" class="box">
                     <div class="pop_box box">
