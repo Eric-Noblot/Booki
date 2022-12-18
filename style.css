@@ -18,7 +18,7 @@
      
 }
                           
-body{
+.site_entier{
     max-width: 1440px;
     height: 100%;
     margin: 0;
@@ -26,20 +26,20 @@ body{
     background-color: var(--bg_color);
     font-family: 'Raleway', sans-serif; 
 }
-body a{ 
+.site_entier a{ 
     text-decoration: none;
     color: black;
 }
-body li{
+.site_entier li{
     list-style-type: none;
 }
-body h1, h2{ 
+.site_entier h1, h2{ 
     font-size: 22px;
 }
-body h3{ 
+.site_entier h3{ 
     font-size: 16px;
 }
-body p{
+.site_entier p{
     font-size: 15px;
 }
 
@@ -75,7 +75,7 @@ body p{
             /*      HEADER
                                 */
 
-#booki_Cont{
+.booki_cont{
     align-items: center;
     margin-bottom: 50px;
 }
@@ -90,13 +90,13 @@ nav{
     left: 43px;
 }
 
-#booki_Cont li{
+.booki_cont li{
     margin-left: 50px;
 }
  
-#booki_Cont a:hover{
+.booki_cont a:hover{
     border-top: 3px solid var(--booki_blue);
-    padding-top: 44px;
+    padding-top: 52px;
 }
 
 
@@ -104,12 +104,12 @@ nav{
                                 */ 
 
  
-#search_Cont{
+.search_cont{
     height: 60px;
     margin: 40px 0px 48px 0px;
 }
 
-#cursor_box{
+.cursor_box{
     min-width: 60px;
     height: 100%;
     justify-content: center;
@@ -121,7 +121,7 @@ nav{
     font-size: 1.5em;
 }
 
-#search_input{
+.search_input{
     height: 100%;
     width: 250px;
     border: none;
@@ -130,7 +130,7 @@ nav{
     padding-left: 15px;
 }
 
-#search_button{
+.search_button{
     height: 100%;
     min-width: 155px;
     background-color: var(--booki_blue);
@@ -151,11 +151,11 @@ nav{
   /*_________FITLRES__________*/
 
 
-#filtre_Cont{
+.filtre_cont{
     align-items: center;
 }
 
-#filtre_box{
+.filtre_box{
     justify-content: space-around;
     width: 70%;
 }
@@ -181,11 +181,11 @@ nav{
     margin-right: 20px;
 }
 
-#info_box{
+.info_box{
     margin: 30px 0px 20px 0px;
 }
 
-#icon_info{
+.icon_info{
     color: var(--booki_blue);
     border: 1px solid grey;
     padding: 6px 11px 8px 11px;
@@ -198,14 +198,14 @@ nav{
                                 */
 
 
-#section1_Cont{
+.section1_cont{
     justify-content: space-between;
 }
 
   /*_________HÉBERGEMENT__________*/
 
 
-#heber_Cont{
+.heber_cont{
     flex-direction: column;
     background-color:var(--box_color);
     border-radius: var(--booki_radius);
@@ -214,13 +214,13 @@ nav{
     padding-bottom: 20px;    
 }
  
-#heber_Cont > h2 {
+.heber_cont > h2 {
     margin-left: 40px;  
     padding-top: 22px;
     margin-bottom: 15px;
 }
 
-#heber_Cont > h3{
+.heber_cont > h3{
     margin-left: 40px;  
 }
 
@@ -262,7 +262,7 @@ nav{
 
   /*_________POPULARITÉ__________*/
  
-#aside_Cont{
+.aside_cont{
     flex-direction: column;
     align-items: center;
     width: 30%;
@@ -283,8 +283,9 @@ nav{
     font-size: 1.4em;
 }
 
-#pop_Cont{
+.pop_cont{
     flex-direction: column;
+    align-items: center;
     gap : 40px;
     width: 430px;
 }
@@ -335,15 +336,15 @@ nav{
 
  /*_________ACTIVITÉS__________*/
 
- #section2_Cont{    
+.section2_cont{    
     flex-direction: column;
     padding-bottom: 45px;
 }
-#section2_Cont > h2{
+.section2_cont > h2{
     padding: 30px 0px;
 }
 
-#acti_Cont{
+.acti_cont{
     justify-content: space-between; 
 }
 
@@ -383,7 +384,7 @@ footer{
     margin: 10px 0px;
 }
 
-#foot_Cont{
+.foot_cont{
     justify-content: flex-start;
     align-items: flex-start;
     column-gap: 18%;
@@ -410,11 +411,11 @@ footer{
 @media screen and (max-width: 1252px){          /*LES HÉBERGEMENTS PASSENT DE 3 à 2 PAR LIGNE */
     
 
-    #filtre_box{
+    .filtre_box{
         width: 80%;
     }
 
-    #aside_Cont{
+    .aside_cont{
         height: 1022px;
         min-width: 395px;
         gap: 20px;
@@ -424,7 +425,7 @@ footer{
         width: 45%;
     }
 
-    #pop_Cont{ 
+    .pop_cont{ 
         width: 430px;
         gap: 40px;
     }
@@ -447,11 +448,11 @@ footer{
     .pop_star {
         font-size: 0.9em;
     }
-    #filtre_box{   
+    .filtre_box{   
         width: 100%;
     }
 
-    #heber_Cont{
+    .heber_cont{
         margin-right: 0px;
         width: 100%;        
     }
@@ -460,19 +461,19 @@ footer{
         width: 29%;
     }
 
-    #section1_Cont{
+    .section1_cont{
         flex-direction: column;
         gap: 60px;
         width: 100%;
     }
 
-    #aside_Cont{
+    .aside_cont{
         height: 100%;
         width: 100%;
        
     }
 
-    #pop_Cont{ 
+    .pop_cont{ 
         flex-direction: row;
         width: 100%;
         gap: 0px;    
@@ -533,7 +534,7 @@ footer{
         border-radius:  var(--booki_radius)  var(--booki_radius) 0px 0px;
     }
 
-    #foot_Cont{
+    .foot_cont{
         margin-left: 45px;
     }
 
@@ -555,11 +556,22 @@ footer{
 
     @media screen and (max-width: 768px){
 
+    body{
+        padding: 0;
+        margin: 0;
+    }
+    .site_entier{
+        padding: 30px 0px;
+    }
 
-    #booki_Cont{
+    main{
+        padding: 30px;
+    }
+
+    .booki_cont{
         flex-direction: column;
         height: 100px;  
-        margin-bottom: 80px;
+        margin-bottom: 50px;
     }
 
     nav{
@@ -571,32 +583,32 @@ footer{
         padding: 0;
         }
 
-    #booki_Cont li{
+    .booki_cont li{
         width: 50%;
         text-align: center;
         padding-bottom: 36px;   
         border-bottom: 3px solid var(--box_color);
         margin: 0px;
     }
-    #booki_Cont li:hover{
+    .booki_cont li:hover{
         border-color: var(--booki_blue);
     }
 
-    #booki_Cont a:hover{
+    .booki_cont a:hover{
         padding-top: 0px;
         border-top :none;
     }
 
-    #search_input{  
+    .search_input{  
         width: 300px;
     }
 
-    #search_Cont{
+    .search_cont{
         justify-content: center;
         margin: 45px 0px 25px 0px;
     }
 
-    #search_button{
+    .search_button{
         min-width: 70px;
     }
     
@@ -608,12 +620,12 @@ footer{
         display: inline; 
     }
     
-    #filtre_Cont{
+    .filtre_cont{
         flex-direction: column;
         align-items: flex-start;    
     }
 
-    #filtre_box{
+    .filtre_box{
         justify-content: space-around;
         flex-wrap: wrap;
         margin-left: 0px;
@@ -626,18 +638,18 @@ footer{
         margin: 15px 0px;
     }
 
-    #info_box{
+    .info_box{
         margin: 20px 0px 40px 0px;
     }
 
-    #section1_Cont{
+    .section1_cont{
         flex-direction: column-reverse;
         gap: 40px;
         height: 100%;
         margin-top: -70px;
     }
 
-    #heber_Cont{
+    .heber_cont{
         border-radius: 0px;
         background-color: var(--bg_color);
         margin-top: -30px;
@@ -670,14 +682,14 @@ footer{
         margin-top: 2px;
     }
 
-    #aside_Cont{
+    .aside_cont{
         border-radius: 0px;
         gap: 20px;
         margin-top: 60px;
         min-width: 240px;
     }
 
-    #pop_Cont{
+    .pop_cont{
         flex-direction: column;
         align-items: center;
         gap: 50px;
@@ -731,11 +743,11 @@ footer{
         font-size: 16px;
     }
 
-    #section2_Cont h2{
+    .section2_cont h2{
         margin-left: 15px;
     }
 
-    #acti_Cont{
+    .acti_cont{
         flex-direction: column; 
         gap: 50px;  
         align-items: center;
@@ -752,7 +764,7 @@ footer{
         border-radius:  var(--booki_radius)  var(--booki_radius) 0px 0px;
     }
 
-    #foot_Cont{
+    .foot_cont{
         flex-direction: column;
         margin-left: 45px;
     }
@@ -785,7 +797,7 @@ footer{
         font-size: 14px;
     }
 
-    #filtre_box{
+    .filtre_box{
         justify-content: space-between;
     }
 
@@ -830,7 +842,7 @@ footer{
         font-size: 13px;
     }
 
-    #search_input{  
+    .search_input{  
         width: 250px;
     }
 
@@ -848,7 +860,7 @@ footer{
 width: 165px;
 }
 
-#search_input{  
+.search_input{  
 width: 200px;
 }
 
@@ -870,7 +882,7 @@ width:150px;
 width: 140px;
 }
 
-#search_input{  
+.search_input{  
 width: 170px;
 }
 
@@ -887,7 +899,7 @@ width:130px;
 
 @media screen and (max-width: 360px){   /*TAILLE MINIMUM */
 
-#filtre_box{
+.filtre_box{
 justify-content: center;
 }
 .button_filtre{
