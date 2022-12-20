@@ -713,7 +713,7 @@ footer{
         flex-direction: column;
         height: 100%;
         width: 190px;
-        padding: 15px 0px;
+        padding: 15px 3px 15px 0px;
     }
 
     .pop_star{
@@ -783,7 +783,7 @@ footer{
 }
 
 
- /*-------*/                /* MINIMUM */
+ /*-------*/            
 
 
 @media screen and (max-width: 592px){     /*réajustement des boutons filtre
@@ -816,32 +816,18 @@ footer{
 }
 
 
-@media screen and (max-width: 532px){      /*réajustement des boutons filtre
-                                            + photos pop*/
-
-    .button_filtre{
-        width: 200px;
-    }
-
-    .icon_filtre{
-        margin-right: 15px;
-    }
-
-    .pop_photo{
-        width: 160px;
-    }
-
-}
-
-@media screen and (max-width: 495px){   /*réajustement des boutons filtre
+@media screen and (max-width: 500px){   /*réajustement des boutons filtre
                                          + photos pop*/
 
     .button_filtre{
 
-        width: 180px;
+        width: 170px;
         font-size: 13px;
     }
 
+    .icon_filtre{
+        margin-right: 10px;
+    }
     .search_input{  
         width: 250px;
     }
@@ -852,52 +838,9 @@ footer{
     
 }
 
-@media screen and (max-width: 440px){   /*réajustement des boutons filtre
-    + photos pop*/
 
-.button_filtre{
 
-width: 165px;
-}
-
-.search_input{  
-width: 200px;
-}
-
-.pop_text{
-    padding-right: 4px;
-}
-
-.pop_photo{
-width:150px;             
-}
-
-}
-
-@media screen and (max-width: 405px){   /*réajustement des boutons filtre
-                                        + photos pop*/
-
-.button_filtre{
-
-width: 140px;
-}
-
-.search_input{  
-width: 170px;
-}
-
-.pop_photo{
-width:130px;             
-}
-
-.pop_star{
-    margin-top: auto;
-    font-size: 0.8em;
-}
-
-}
-
-@media screen and (max-width: 360px){   /*TAILLE MINIMUM */
+@media screen and (max-width: 400px){   /*TAILLE MINIMUM */
 
 .filtre_box{
 justify-content: center;
@@ -907,6 +850,9 @@ width: 250px;
 font-size: 14px;
 }
 
+.search_input{
+    width: 170px;
+}
 .heber_text p{
 font-size: 15px;
 }
@@ -922,14 +868,12 @@ font-size: 0.9em;
 .pop_photo{
 width:120px;             
 }
-.pop_text{
-padding-right: 4px;
-}
+
 .pop_text h3{
 font-size: 14px;
 }
 .pop_text p{
-font-size: 12px;
+font-size: 13px;
 }
 .pop_star{
 margin-top: auto;
