@@ -30,44 +30,45 @@
         </header>
 
         <main>
-            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-            <p>En plein centre-ville ou en pleine nature</p>
-            <div class="form_cont container">                       <!-- SECTION FORM -->
-                <div class="cursor_box box">
-                    <i class="fa-solid fa-location-dot cursor"></i>
+            <section class ="section_recherche">
+                <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                <p>En plein centre-ville ou en pleine nature</p>
+                <div class="form_cont container">                       <!-- INPUT / FORM -->
+                    <div class="cursor_box box">
+                        <i class="fa-solid fa-location-dot cursor"></i>
+                    </div>
+                    <form>
+                        <input type="text" name="form_input" class="form_input" placeholder="Marseille, France">
+                    </form>
+                    <button class="search_button"><span id="rechercher">Rechercher</span>
+                    <i class="fa-solid fa-magnifying-glass" id="loupe"></i></button>
                 </div>
-                <form>
-                    <input type="text" name="form_input" class="form_input" placeholder="Marseille, France">
-                </form>
-                <button class="search_button"><span id="bouton_rechercher">Rechercher</span>
-                <i class="fa-solid fa-magnifying-glass" id="loupe"></i></button>
-            </div>
 
-            <div class ="filtre_cont container">                <!-- SECTION FILTRES -->
-                <h3>Filtres</h3>
-                <div class="filtre_box box">
-                    <a href="#"><div class="filtre_button box">
-                        <i class="fa-solid fa-money-bill-wave icon_button filtre_icon"></i>Économique</div>
-                    </a>
-                    <a href="#"><div class="filtre_button box">
-                        <i class="fa-solid fa-person icon_button filtre_icon"></i>Familial</div>
-                    </a>
-                    <a href="#"><div class="filtre_button box">
-                        <i class="fa-solid fa-heart icon_button filtre_icon"></i>Romantique</div>
-                    </a>
-                    <a href="#"><div class="filtre_button box">
-                        <i class="fa-solid fa-dog icon_button filtre_icon"></i>Animaux autorisés</div>
-                    </a>
+                <div class ="filtre_cont container">                <!-- FILTRES -->
+                    <h3>Filtres</h3>
+                    <div class="filtre_box box">
+                        <a href="#"><div class="filtre_button box">
+                            <i class="fa-solid fa-money-bill-wave icon_button filtre_icon"></i>Économique</div>
+                        </a>
+                        <a href="#"><div class="filtre_button box">
+                            <i class="fa-solid fa-person icon_button filtre_icon"></i>Familial</div>
+                        </a>
+                        <a href="#"><div class="filtre_button box">
+                            <i class="fa-solid fa-heart icon_button filtre_icon"></i>Romantique</div>
+                        </a>
+                        <a href="#"><div class="filtre_button box">
+                            <i class="fa-solid fa-dog icon_button filtre_icon"></i>Animaux autorisés</div>
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="info_box box">                          
-                <i class="fa-solid fa-info icon_info"></i>
-                <p>Plus de 500 logements sont disponibles dans cette ville</p>
-            </div>
-
+                <div class="info_box box">                          
+                    <i class="fa-solid fa-info icon_info"></i>
+                    <p>Plus de 500 logements sont disponibles dans cette ville</p>
+                </div>
+            </section>
             <div class="heber_pop container">               
-                <section class="hebergement container">                     <!-- SECTION HEBERGEMENT -->
+                <section class="section_hebergement container">                     <!-- SECTION HÉBERGEMENT -->
                     <h2 id="heber_ancre">Hébergements à Marseille</h2>
                     <div class="heber_cont container">
                         <article class="heber_box">
@@ -176,10 +177,10 @@
                     <h3>Afficher plus</h3>
                 </section>
                 
-                <aside class="popularite container">            <!-- SECTION POPULARITÉ -->
+                <aside class="aside_popularite container">            <!-- ASIDE POPULARITÉ -->
                     <div class="pop_logo box">
                         <h2>Les plus populaires</h2>
-                        <i class="fa-solid fa-chart-line pop_button"></i>
+                        <i class="fa-solid fa-chart-line pop_icon"></i>
                     </div>
                     <div class="pop_cont container">
                         <article class="pop_box box">
@@ -231,7 +232,7 @@
                 </aside>
             </div>
 
-            <section class="activites container">                       <!-- SECTION ACTIVITÉS -->
+            <section class="section_activite container">                       <!-- SECTION ACTIVITÉS -->
                 <h2 id="acti_ancre">Activités à Marseille</h2>
                 <div class="acti_cont container">
                     <article class ="acti_box">

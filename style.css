@@ -10,7 +10,7 @@
 }
 
 
-            /*      COMMUN
+            /*      ÉLÉMENTS COMMUNS
                                 */
 
 *{
@@ -26,22 +26,22 @@
     background-color: var(--primary_color);
     font-family: 'Raleway', sans-serif; 
 }
-.site_entier a{ 
-    text-decoration: none;
-    color: black;
-}
-.site_entier li{
-    list-style-type: none;
-}
-.site_entier h1, h2{ 
-    font-size: 22px;
-}
-.site_entier h3{ 
-    font-size: 16px;
-}
-.site_entier p{
-    font-size: 15px;
-}
+    .site_entier a{ 
+        text-decoration: none;
+        color: black;
+    }
+    .site_entier li{
+        list-style-type: none;
+    }
+    .site_entier h1, h2{ 
+        font-size: 22px;
+    }
+    .site_entier h3{ 
+        font-size: 16px;
+    }
+    .site_entier p{
+        font-size: 14px;
+    }
 
 .container{
     display: flex;
@@ -83,6 +83,13 @@
     align-items: center;
     margin-bottom: 50px;
 }
+    .header_cont li{
+        margin-left: 50px;
+    }
+    .header_cont a:hover{
+        border-top: 3px solid var(--booki_blue);
+        padding-top: 52px;
+    }
 
 nav{
     margin-left: auto;
@@ -94,23 +101,13 @@ nav{
     left: 43px;
 }
 
-.header_cont li{
-    margin-left: 50px;
-}
- 
-.header_cont a:hover{
-    border-top: 3px solid var(--booki_blue);
-    padding-top: 52px;
-}
-
-
-        /* FORM
+        /* FORM / RECHERCHE
                                 */ 
 
  
 .form_cont{
     height: 60px;
-    margin: 40px 0px 48px 0px;
+    margin: 40px 0px 50px 0px;
 }
 
 .cursor_box{
@@ -128,7 +125,6 @@ nav{
 .form_input{
     height: 100%;
     width: 250px;
-    border: none;
     border: 1px solid var(--secondary_color);
     font-size: 18px;
     padding-left: 15px;
@@ -174,10 +170,10 @@ nav{
     font-weight: bold;
     font-size: 16px;
 }
-.filtre_button:hover{
-    background-color: var(--booki_hover);
-    cursor: pointer;
-}
+    .filtre_button:hover{
+        background-color: var(--booki_hover);
+        cursor: pointer;
+    }
 
 .icon_button{
     color: var(--booki_blue);
@@ -198,8 +194,8 @@ nav{
     font-size: 0.9em;
 }
  
-            /*      SECTION
-                                */
+        /*      SECTION HÉBERGEMENT / POPULARITÉ
+                            */
 
 
 .heber_pop{
@@ -209,7 +205,7 @@ nav{
   /*_________HÉBERGEMENT__________*/
 
 
-.hebergement{
+.section_hebergement{
     flex-direction: column;
     background-color:var(--secondary_color);
     border-radius: var(--booki_radius);
@@ -217,19 +213,16 @@ nav{
     margin-right: 7px;
     padding-bottom: 20px;    
 }
- 
-.hebergement > h2 {
-    margin-left: 40px;  
-    padding-top: 22px;
-    margin-bottom: 15px;
-}
-
-.hebergement > h3{
-    margin-left: 40px;  
-}
+    .section_hebergement h2{
+        margin-left: 40px;  
+        padding-top: 22px;
+        margin-bottom: 15px;
+    }
+    .section_hebergement > h3{
+        margin-left: 40px;  
+    }
 
 .heber_cont{
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
@@ -251,7 +244,6 @@ nav{
     border-radius:  var(--booki_radius)  var(--booki_radius) 0px 0px;
     padding: 7px;
 }
-
 .heber_photo:hover{
     padding: 0;
     margin-bottom: 5px;
@@ -261,18 +253,14 @@ nav{
     margin-left: 15px;
 }
 
-.heber_text p{
-    font-size: 14px;
-}
-
   /*_________POPULARITÉ__________*/
+
  
-.popularite{
+.aside_popularite{
     flex-direction: column;
     align-items: center;
-    width: 30%;
+    min-width: 30%;
     gap: 21px;
-    min-width: 375px;
     background-color: var(--secondary_color);
     border-radius: var(--booki_radius);
 }
@@ -283,7 +271,7 @@ nav{
     width: 100%;
 }
 
-.pop_button{
+.pop_icon{
     color: var(--booki_blue);
     font-size: 1.4em;
 }
@@ -292,7 +280,7 @@ nav{
     flex-direction: column;
     align-items: center;
     gap : 40px;
-    width: 430px;
+    width: 100%;
 }
  
 .pop_box{
@@ -302,11 +290,7 @@ nav{
     border-radius: var(--booki_radius);
     margin: 0px 5px;
 }
-/*.pop_box a{
-    margin: 0;
-    padding: 0;
-    word-wrap: break-word;
-}*/
+
 .pop_photo{
     height: 170px;
     width: 150px;
@@ -315,11 +299,11 @@ nav{
     margin-right: 10px;
     margin-top: 2px;
 }
-.pop_photo:hover{
-    padding: 0;
-    margin-right: 15px;
-    margin-top: 4px;
-}
+    .pop_photo:hover{
+        padding: 0;
+        margin-right: 15px;
+        margin-top: 4px;
+    }
 
 .pop_text{
     flex-direction: column;
@@ -328,12 +312,9 @@ nav{
     width: 190px;
     padding: 15px 0px;
 }
-.pop_text h3{
-    margin:0;
-}
-.pop_text p{
-    font-size: 14px;
-}
+    .pop_text h3{
+        margin:0;
+    }
 
 .pop_star{
     margin-top: auto;
@@ -341,13 +322,13 @@ nav{
 
  /*_________ACTIVITÉS__________*/
 
-.activites{    
+.section_activite{    
     flex-direction: column;
     padding-bottom: 45px;
 }
-.activites > h2{
-    padding: 30px 0px;
-}
+    .section_activite h2{
+        padding: 30px 0px;
+    }
 
 .acti_cont{
     justify-content: space-between; 
@@ -361,23 +342,20 @@ nav{
     width: 22%;
 }
 
-.acti_text{
-    height: 100%;
-    width: 100%;
-}
-.acti_text h3{
-    margin-left: 20px;
-    padding-right: 2px;
-}
-
 .acti_photo{
-    display: flex;
-    flex-direction: column;
     height: 87%;
     width: 100%;
     border-radius:  var(--booki_radius)  var(--booki_radius) 0px 0px;
 }
 
+.acti_text{
+    height: 100%;
+    width: 100%;
+}
+    .acti_text h3{
+        margin-left: 20px;
+        margin-right: 4px;
+    }
 
 
  /*__________FOOTER___________*/
@@ -394,7 +372,7 @@ footer{
     align-items: flex-start;
     column-gap: 18%;
     margin-left: 65px;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 .foot_box{
@@ -402,12 +380,12 @@ footer{
     align-items: flex-start;
     margin-top: 25px;
 }
-.foot_box h3{
-    margin: 14px 0px;
-}
-.foot_box p{
-    margin: 10px 0px;
-}
+    .foot_box h3{
+        margin: 14px 0px;
+    }
+    .foot_box p{
+        margin: 10px 0px;
+    }
 
 
  /*_________MEDIA QUERIES___________*/
@@ -420,30 +398,23 @@ footer{
         width: 80%;
     }
 
-    .popularite{
-        height: 1022px;
-        min-width: 395px;
-        gap: 20px;
-    }
-
     .heber_box{
         width: 45%;
     }
 
     .pop_cont{ 
         width: 430px;
-        gap: 40px;
     }
 
     .acti_box{
         height: 400px;
-        width: 22%;
     }
-    
     .acti_photo{
         height: 84%;
     }
-
+    .acti_text h3{
+        margin: 14px 4px 0px 20px
+    }
 }
 
  /*-------*/
@@ -451,33 +422,32 @@ footer{
     @media screen and (max-width: 992px){          /* MODE TABLETTE */
 
     .pop_star {
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
     .filtre_box{   
         width: 100%;
     }
+    .filtre_button{
+        font-size: 15px;
+    }
 
-    .hebergement{
+    .section_hebergement{
         margin-right: 0px;
         width: 100%;        
     }
-
     .heber_box{
         width: 29%;
     }
-
     .heber_pop{
         flex-direction: column;
         gap: 60px;
         width: 100%;
     }
 
-    .popularite{
+    .aside_popularite{
         height: 100%;
         width: 100%;
-       
     }
-
     .pop_cont{ 
         flex-direction: row;
         width: 100%;
@@ -486,18 +456,14 @@ footer{
         justify-content: space-evenly; 
         border-radius: var(--booki_radius);
     }  
-
     .pop_logo{
-        flex-direction: row;
         justify-content: space-between; 
-        width: 94%;
+        width: 93%;
     }
-
     .pop_box{
         width: 30%;
         height: 150px;
     }
-
     .pop_photo{
         height: 150px;
         width: 110px;
@@ -505,34 +471,31 @@ footer{
         padding: 7px;
         margin-right: 5px;
     }
+        .pop_photo:hover{
+            padding: 0;
+            height: 150px;
+            margin-right: 10px;
+            margin-top: 4px;
+        }
 
     .pop_text{
         padding: 20px 4px;
     }
-    .pop_photo:hover{
-        padding: 0;
-        height: 150px;
-        margin-right: 10px;
-        margin-top: 4px;
-    }
-
-    .pop_text h3{
-        font-size: 14px;
-    }
-
-    .pop_text p{
-        font-size: 13px;
-    }
+        .pop_text h3{
+            font-size: 14px;
+        }
+        .pop_text p{
+            font-size: 13px;
+        }
 
     .acti_box{
         height: 300px;
     }
-    
     .acti_text h3{
         font-size: 16px;
-        margin-left: 15px;
-    } 
+        margin: 14px 4px 0px 15px
 
+    } 
     .acti_photo{
         height: 80%;
         width: 100%;
@@ -545,50 +508,36 @@ footer{
 
 }
 
-@media screen and (max-width: 805px){       /* rétrécissement étoiles et H3 dans Popularité */
+ /*-------*/               
 
-    .pop_star {
-        font-size: 0.8em;
-    }
-
-    .pop_text h3{
-        font-size: 13px;
-    }
-}
-
- /*-------*/                /* MODE MOBILE */
-
-
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 768px){       /* MODE MOBILE */
 
     body{
         padding: 0;
         margin: 0;
     }
     .site_entier{
-        padding: 30px 0px 0px 0px;
-        margin: 0px;
-    }
-
-    main{
-        padding: 30px;
+        padding: 0px;
+        margin:  0px;
+        background-color: var(--secondary_color);
     }
 
     .header_cont{
         flex-direction: column;
-        height: 100px;  
-        margin-bottom: 50px;
+        margin: 25px 0px 0px 0px;
     }
 
     nav{
         width: 100%;
         margin-top: 20px;
     }
+        nav ul{
+            padding: 0;
+            }
 
-    nav ul{
-        padding: 0;
-        }
-
+    header{
+        background-color: var(--primary_color);
+    }
     .header_cont li{
         width: 50%;
         text-align: center;
@@ -596,29 +545,36 @@ footer{
         border-bottom: 3px solid var(--secondary_color);
         margin: 0px;
     }
-    .header_cont li:hover{
-        border-color: var(--booki_blue);
-    }
+        .header_cont li:hover{
+            border-color: var(--booki_blue);
+        }
+        .header_cont a:hover{
+            padding-top: 0px;
+            border-top :none;
+        }
 
-    .header_cont a:hover{
-        padding-top: 0px;
-        border-top :none;
+    .section_recherche{
+        background-color: var(--primary_color);
+        padding: 0px 20px 60px 20px;
     }
-
-    .form_input{  
-        width: 300px;
-    }
+        .section_recherche h1{
+            padding-top: 20px;
+            margin: 0;
+        }
 
     .form_cont{
         justify-content: center;
         margin: 45px 0px 25px 0px;
+    }
+    .form_input{  
+        width: 300px;
     }
 
     .search_button{
         min-width: 70px;
     }
     
-    #bouton_rechercher{
+    #rechercher{
         display: none;
     }
 
@@ -630,14 +586,12 @@ footer{
         flex-direction: column;
         align-items: flex-start;    
     }
-
     .filtre_box{
         justify-content: space-around;
         flex-wrap: wrap;
         margin-left: 0px;
         height: 100%;
     }
-
     .filtre_button{
         height: 60px;
         width: 250px;
@@ -645,88 +599,43 @@ footer{
     }
 
     .info_box{
-        margin: 20px 0px 40px 0px;
+        margin: 20px 0px 0px 0px;
     }
 
-    .heber_pop{
-        flex-direction: column-reverse;
-        gap: 40px;
-        height: 100%;
-        margin-top: -70px;
-    }
-
-    .hebergement {
+    .aside_popularite{
         border-radius: 0px;
-        background-color: var(--primary_color);
-        margin-top: -30px;
-    }
-
-    .heber_cont{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .heber_box{
-        display: flex;
-        flex-direction: column;
-        background-color: var(--primary_color);
-        width: 85%;
-        height: 240px;
-        box-shadow: 4px 4px 10px var(--secondary_color);
-    }
-     
-    .heber_photo{
-        height: 145px;
-       
-    }
-    .heber_text p{
-        font-size: 16px;
-    }
-    .heber_text h3{
-        font-size: 18px;
-        margin-top: 2px;
-    }
-
-    .popularite{
-        border-radius: 0px;
-        gap: 20px;
-        margin-top: 60px;
         min-width: 240px;
     }
-
     .pop_cont{
         flex-direction: column;
         align-items: center;
         gap: 50px;
         width: 100%;
     }
-     
     .pop_box{
         width: 85%;
         height: 170px;
-        border-radius: var(--booki_radius);
-        margin: 0px 5px;
     }
-
     .pop_logo{
-        flex-direction: row;
-        justify-content: space-between; 
         width: 85%;
     }
 
     .pop_text{
         flex-direction: column;
-        height: 100%;
-        width: 190px;
-        padding: 15px 3px 15px 0px;
+        width: 100%;
+        padding: 15px 10px 15px 0px;
     }
+        .pop_text h3{
+            font-size: 18px;
+        }
+        .pop_text p{
+            font-size: 16px;
+        }
 
     .pop_star{
         margin-top: auto;
         font-size: 1.1em;
     }
-    
     .pop_photo{
         height: 170px;
         width: 190px;
@@ -735,35 +644,57 @@ footer{
         margin-right: 10px;
         margin-top: 2px;
     }
-    
-    .pop_photo:hover{
-        height: 170px;
-        margin-right: 15px;
-        margin-top: 4px;
+        .pop_photo:hover{
+            height: 170px;
+            margin-right: 15px;
+            margin-top: 4px;
+        }
+
+    .heber_pop{
+        flex-direction: column-reverse;
+        gap: 10px;
+        height: 100%;
+        margin-top: -20px;
     }
 
-    .pop_text h3{
-        font-size: 18px;
+    .section_hebergement {
+        border-radius: 0px;
+        background-color: var(--primary_color);
     }
-    .pop_text p{
+    .heber_cont{
+        flex-direction: column;
+    }
+    .heber_box{
+        width: 85%;
+        height: 240px;
+        box-shadow: 4px 4px 10px var(--secondary_color);
+    }
+    .heber_photo{
+        height: 145px;
+    }
+    .heber_text p{
         font-size: 16px;
     }
+        .heber_text h3{
+            font-size: 18px;
+            margin-top: 2px;
+        }
 
-    .activites h2{
-        margin-left: 15px;
+    .section_activite{
+        background-color: var(--primary_color);
     }
-
+        .section_activite h2{
+            margin-left: 15px;
+        }
     .acti_cont{
         flex-direction: column; 
         gap: 50px;  
         align-items: center;
     }
-
     .acti_box{
         width: 85%; 
         height: 235px;
     }
-
     .acti_photo{
         height: 78%;
         width: 100%;
@@ -773,16 +704,9 @@ footer{
     footer{
         margin: 0px;
     }
-
     .foot_cont{
         flex-direction: column;
         margin-left: 45px;
-    }
-
-    .foot_box{
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 25px;
     }
     .foot_box h3{
         margin: 15px 0px;
@@ -791,9 +715,6 @@ footer{
         margin: 8px 0px;
     }
 }
-
-
- /*-------*/            
 
 
 @media screen and (max-width: 592px){     /*réajustement des boutons filtre
@@ -807,36 +728,29 @@ footer{
         font-size: 14px;
     }
 
-    .filtre_box{
-        justify-content: space-between;
-    }
-
     .pop_text h3{
         font-size: 16px;
     }
     .pop_text p{
         font-size: 14px;
     }
-
     .pop_star{
-        margin-top: auto;
         font-size: 1em;
     }
 
 }
 
-
 @media screen and (max-width: 520px){   /*réajustement des boutons filtre
                                          + photos pop*/
 
     .filtre_button{
-        width: 170px;
+        width: 175px;
         font-size: 13px;
     }
-
     .filtre_icon{
         margin-right: 10px;
     }
+
     .form_input{  
         width: 250px;
     }
@@ -848,49 +762,51 @@ footer{
 }
 
 
-
 @media screen and (max-width: 400px){   /*TAILLE MINIMUM */
 
-.filtre_box{
-justify-content: center;
-}
-.filtre_button{
-width: 250px;
-font-size: 14px;
-}
+    .filtre_box{
+    justify-content: center;
+    }
+    .filtre_button{
+    width: 250px;
+    font-size: 14px;
+    }
 
-.form_input{
-    width: 170px;
-}
-.heber_text p{
-font-size: 15px;
-}
-.heber_text h3{
-font-size: 16px;
-margin-top: 2px;
-}
+    .form_input{
+        width: 170px;
+    }
 
-.heber_star{
-font-size: 0.9em;
-}
+    .section_hebergement h2 {
+        margin-left: 20px;
+        padding-right: 5px;
+    }
+    .heber_text p{
+    font-size: 15px;
+    }
+    .heber_text h3{
+    font-size: 16px;
+    margin-top: 2px;
+    }
+    .heber_star{
+    font-size: 0.9em;
+    }
 
-.pop_photo{
-width:120px;             
-}
+    .pop_photo{
+    width:120px;             
+    }
+    .pop_text h3{
+    font-size: 14px;
+    }
+    .pop_text p{
+    font-size: 13px;
+    }
+    .pop_star{
+    margin-top: auto;
+    font-size: 0.8em;
+    }
 
-.pop_text h3{
-font-size: 14px;
-}
-.pop_text p{
-font-size: 13px;
-}
-.pop_star{
-margin-top: auto;
-font-size: 0.8em;
-}
+    .acti_text h3{
+    font-size: 15px;
+    } 
 
-.acti_text h3{
-font-size: 15px;
-margin-left: 15px;
-} 
 }
