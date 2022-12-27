@@ -25,6 +25,8 @@
     padding: 30px;
     background-color: var(--primary_color);
     font-family: 'Raleway', sans-serif; 
+    margin-left: auto;
+    margin-right: auto;
 }
     .site_entier a{ 
         text-decoration: none;
@@ -84,11 +86,14 @@
     margin-bottom: 50px;
 }
     .header_cont li{
-        margin-left: 50px;
+        margin-left: 30px;
+    }
+    .header_cont a{
+        padding: 52px 25px 0px 25px;
     }
     .header_cont a:hover{
         border-top: 3px solid var(--booki_blue);
-        padding-top: 52px;
+        color: var(--booki_blue)
     }
 
 nav{
@@ -112,7 +117,7 @@ nav{
 
 .cursor_box{
     min-width: 60px;
-    height: 100%;
+    height: 100%    ;
     justify-content: center;
     background-color: var(--secondary_color);
     border-radius: 15px 0px 0px 15px;
